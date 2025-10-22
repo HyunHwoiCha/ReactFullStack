@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice7</title>
+</head>
+<body>
+    <h1>List Title</h1>
+    <!-- ul태그(Unordered List) -->
+
+    <!-- style="list-style-type:
+        disc : 디폴트 값
+        circle : 빈 원
+        squre : 사각형
+        none : 구분값 X -->
+
+    <ul style="list-style-type: circle;">
+        <li>홍길동</li>
+        <li>김관식</li>
+        <li>남궁민</li>
+        <li>고윤정</li>
+    </ul>
+    <hr>
+    <h1>순서가 있는 리스트</h1>
+
+    <!-- ol태그(Ordered List) -->
+
+    <!-- type=
+        1 -> 숫자
+        a -> 영어 소문자
+        A -> 영어 대문자
+        i -> 로마 숫자 소문자
+        I -> 로마 숫자 대문자 -->
+        
+    <ol type="I" reversed>
+        <li>가스불 키기</li>
+        <li>냄비를 올려서 물 받기</li>
+        <li>물을 500ml 넣고 끓이기</li>
+        <li>스프를 넣기</li>
+        <li>면 넣기</li>
+    </ol>
+    <hr>
+    <h2>깊이가 있는 리스트</h2>
+    <!--  -->
+    <ul>
+        <li>
+            개인 뱅킹
+            <ul style="list-style-type: none;">
+                <li>조회</li>
+                <li>이체</li>
+                <li>신규/해지</li>
+                <li>공과금</li>
+            </ul>
+        </li>
+        <li>
+            법인 뱅킹
+            <ol>
+                <li>조회</li>
+                <li>이체</li>
+                <li>신규/해지</li>
+                <li>공과금</li>
+            </ol>
+        </li>
+    </ul>
+</body>
+</html>
