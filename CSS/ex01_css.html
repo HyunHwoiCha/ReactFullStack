@@ -7,8 +7,16 @@
     <style>
         /* 현재 페이지에 있는 모든 해당하는 태그에 적용 */
         p { color:blueviolet; }
-        a { color:yellowgreen;}
     </style>
+
+    <!-- 외부 스타일 시트 연결하기 -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* @import 방식 */
+        @import "index.css";
+    </style>
+    
 </head>
 <body>
     <h1>CSS</h1>
@@ -21,6 +29,9 @@
     <p>스타일 연습중1</p>
     <p>스타일 연습중2</p>
     <p>스타일 연습중3</p>
-    <a href="#">COLOR</a>
+    <!-- CSS 스타일 충돌 시 적용 우선 순위
+    1. 인라인 방식
+    2. 외부&내부 스타일 시트 방식 (후에 선언된 것이 더 먼저 적용) -->
+    <h2>import 방식의 스타일 적용</h2>
 </body>
 </html>
