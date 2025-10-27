@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice11</title>
+    <style>
+        .shadow {
+            color : #222;
+            text-shadow: 10px 10px 1px rgba(0,0,0,0.3);
+            /* rgba(red,green,blue,투명도)
+            색깔은 0부터 255까지의 수, 투명도는 0.0 ~ 0.1 사이의 소수
+            투명도는 0에 가까울 수록 투명해진다. */
+        }
+         /* 여러 겹의 그림자 */
+        .title-glow {
+            color : white;
+            text-shadow: 0 0 5px #00f, 0 0 10px #0ff, 0 0 20px #0ff;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="shadow">텍스트 그림자 예시</h1>
+    <h1 class="title-glow">네온 느낌의 다중 그림자 효과</h1>
+    
+</body>
+</html>
