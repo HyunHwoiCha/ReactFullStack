@@ -4,15 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Normalize.css 예제</title>
-    <link rel="stylesheet" 
-          href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- rel="stylesheet" : 현재 링크가 스타일시트임을 의미
         href="..." : 외부파일의 경로(CDN주소를 통해서 normalize.css 불러오기)
         integrity="..." : 다운로드된 파일이 원본과 같은지 검사
         crossorigin="anonymous" : 외부서버(CDN)에서 파일을 가져올 때 인증 정보를 보내지 않도록 설정
-        referrerpolicy="no-referrer" : CDN으로 요청할 때, 현재 페이지의 URL 정보를 서버에 보내지 않도록 설정 -->
+        referrerpolicy="no-referrer" : CDN으로 요청할 때, 현재 페이지의 URL 정보를 서버에 보내지 않도록 설정
+     -->
+
+     <!-- 나의 스타일 적용 -->
+     <style>
+        body{
+            font-family: "segoe UI", sans-serif;
+            background-color: #f7f7f7;
+            color: #2c3e50;
+            padding: 20px;
+        }
+
+        h1{
+            color: #2980b9;
+        }
+
+        p{
+            background-color: #ecf0f1;
+            padding: 10px;
+            border-radius: 6px;
+        }
+
+        ul{
+            background-color: #dff9fb;
+            border: 1px solid #74b9ff;
+            padding: 25px;
+            border-radius: 4px;
+        }
+
+        table{
+            border: 1px solid #bdc3c7;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        /* 그룹 선택자 */
+        th, td{
+            border: 1px solid #bdc3c7;
+            padding: 8px;
+            text-align: left;
+        }
+
+     </style>
 </head>
 <body>
-        
+    <h1>Normalize 적용 실습</h1>
+    <P>이 예제는 normalize.css를 적용했을 때 각 브라우저 기본 스타일이 어떻게 '정돈'되는지를 보여준다.
+        위의 `&ltlink&gt`부분을 주석처리하면, 각 브라우저별 기본 여백, 폰트, 표 스타일 차이를 볼 수 있다.
+    </P>
+    <h2>리스트 비교</h2>
+    <ul>
+        <li>HTML 기본 리스트 스타일</li>
+        <li>normolize.css 적용 시 브라우저별 일관된 출력</li>
+        <li>Reset과 달리 여백은 완전히 제거되지 않음</li>
+    </ul>
+
+    <h2>테이블 비교</h2>
+    <table>
+        <tr>
+            <th>이름</th>
+            <th>점수</th>
+        </tr>
+        <tr>
+            <td>홍길동</td>
+            <td>95</td>
+        </tr>
+        <tr>
+            <td>이몽룡</td>
+            <td>88</td>
+        </tr>
+    </table>
 </body>
 </html>
