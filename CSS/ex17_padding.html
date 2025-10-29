@@ -50,7 +50,21 @@
             /* 위, 오른쪽, 아래, 왼쪽 순서 */
             padding: 10px 20px 30px 40px;
         }
+        
 
+        /* 중첩 요소 Padding 실습 */
+        .outer{
+            background: #74b9ff;
+            color: white;
+            width: 300px;
+            margin: 40px auto;
+            padding: 30px;
+        }
+
+        .inner{
+            background: #0984e3;
+            padding: 20px;
+        }
     </style>
 </head>
 <body>
@@ -61,5 +75,17 @@
     <div class="box padding-left">padding-left : 30px</div>
     <div class="box padding-all">padding-all : 30px</div>
     <div class="box padding-four">padding-four : 10px 20px 30px 40px</div>
+    
+    <hr>
+
+    <h2>중첩된 요소의 Padding</h2>
+    <div class="outer">
+        바깥 박스(Padding: 30px)
+        <div class="inner">
+            안쪽 박스(Padding:  20px)<br>
+            여기에 텍스트를 넣으면<br>
+            글자와 박스 테두리 사이가 떨어져있다.
+        </div>
+    </div>
 </body>
 </html>
