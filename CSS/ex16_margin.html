@@ -5,11 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practice16</title>
     <style>
+        body{
+            font-family: 'Pretendard', sans-serif;
+            background: #f8f9fa;
+            text-align: center;
+            line-height: 1.6;
+        }
 
+        /*  너비(width) 200px
+            높이(height) 80px
+            배경색(background) #0984e3
+            글자색(color) white
+            테두리 둥글게(border-radius) 8px
+            행간격(line-height) 80px
+            바깥 여백(margin) 상하(40px) 좌우(자동정렬)
+            박스 그림자(box-shadow) 0 0 5px rgba(0,0,0,0.2)
+            */
+        .base-box{
+            width: 200px;
+            height: 80px;
+            background: #0984e3;
+            color: white;
+            border-radius: 8px;
+            line-height: 80px;
+            margin: 40px auto;
+            box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+        }
+
+        .box-top{
+            /* 위로 60px로 여백 */
+            margin-top: 60px;
+            background: #74b9ff;
+        }
+
+        .box-right{
+            /* 오른쪽으로 */
+            margin-right: 100px;
+            background: #aaa6f1;
+        }
+
+        .box-bottom{
+            /* 아래로 60px로 여백 */
+            margin-bottom: 60px;
+            background: #00ceca;
+        }
+
+        .box-left{
+            margin-left: 100px;
+            background: #f82a;
+        }
+        /* 2 개의 블록 요소가 겹치면 Margin값이 더 큰 값만
+            적용됨. -> 마진 상쇄(Margin Collapsing)
+        */
+        /* 요소의 레이아웃을 배치하는 용도로 쓰는게 아니라
+            요소끼리의 간격을 조절하는 용도로 쓰는 것이 좋음. */
     </style>
 </head>
 <body>
-    
-    
+    <h2>모든 방향 margin 실습</h2>
+    <div class="base-box box-top">margin-top : 60px</div>
+    <div class="base-box box-right">margin-right : 100px</div>
+    <div class="base-box box-bottom">margin-bottom : 60px</div>
+    <div class="base-box box-left">margin-left : 100px</div>
+
 </body>
 </html>
