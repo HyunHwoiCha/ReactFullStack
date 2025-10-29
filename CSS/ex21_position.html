@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice21</title>
+    <link rel="stylesheet" href="box.css">
+    <style>
+        .static{
+            background: #74b9;
+            position: static;
+        }
+
+        .relative{
+            background: #20af08;
+            position: relative;
+        }
+
+        .absolute-parent{
+            position: relative;
+            background: #dfe6e9;
+            width: 250px;
+            height: 200px;
+            margin: 20px;
+        }
+
+        .absolute-child{
+            background: #6c5ce7;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+
+        .fixed{
+            background: #fd79a8;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box static">static</div>
+    <div class="box relative">relative</div>
+    
+    <div class="absolute-parent">
+        부모(div)
+        <div class="box absolute-child">absolute</div>
+    </div>
+
+    <div class="box fixed">fixed</div>
+</body>
+</html>
