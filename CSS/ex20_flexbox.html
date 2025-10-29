@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice20</title>
+    <style>
+        body{
+            /* 부모 요소를 flex로 지정했을 때
+                요소들은 기본값으로 좌 -> 우 가로로 배치가 된다.
+            */
+            display: flex;
+            justify-content: center;/*가로 중앙 정렬*/
+            align-items: center;/*세로 중앙 정렬*/
+            border: 1px solid #000;
+            height: 100vh;
+        }
+        
+        /* 
+        너비 200px
+        높이 100px
+        배경색 #0984e3
+        글씨색 white
+        테두리 둥글게 8px
+        글씨 크기 18px
+        박스 그림자 3px 3px 5px rgba(0,0,0,0.4)
+         */
+        .box{
+            width: 200px;
+            height: 100px;
+            background: #0984e3;
+            color: white;
+            border-radius: 8px;
+            font-size: 18px;
+            box-shadow: 5px 5px 8px rgba(0,0,0,0.4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        중앙 정렬된 박스
+    </div>
+    
+</body>
+</html>
