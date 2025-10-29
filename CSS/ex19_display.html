@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice19</title>
+    <style>
+        .box{
+            background: #74b9ff;
+            color: white;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 8px;
+        }
+
+        .inline{
+            /* 블록 속성을 가진 요소들도 inline 속성으로 변경 */
+            /* 
+            inline속성의 특징은 width와 height 속성을 줘도
+            변경이 안된다.
+             */
+            display: inline;
+            /* width: 100px; */
+            /* height: 50px; */
+        }
+
+        .inline-block{
+            /* 
+            inline의 속성을 가지고 있지만 가로와 세로의 높이를 변경하려면
+            inline-block 속성을 사용해야 한다.
+            */
+            display: inline-block;
+            width: 100px;
+            height: 50px;
+        }
+
+        .none{
+            display: none;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Display 실습</h1>
+    <hr>
+
+    <h2>Display : block</h2>
+    <div class="box block">박스 1</div>
+    <div class="box block">박스 2</div> 
+
+    <h2>Display : inline</h2>
+    <div class="box inline">박스 1</div>
+    <div class="box inline">박스 2</div>
+
+    <h2>Display : inline-block</h2>
+    <div class="box inline-block">박스 1</div>
+    <div class="box inline-block">박스 2</div>
+
+    <h2>Display : none</h2>
+    <div class="box none">박스 1</div>
+</body>
+</html>
