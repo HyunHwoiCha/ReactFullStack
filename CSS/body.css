@@ -1,0 +1,12 @@
+body{
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    place-items: center; /*가로, 세로 중앙 정렬*/
+    /* 
+    place-items : 가로, 세로 방향 정렬
+    
+    justify-content : 가로 방향 정렬
+    align-content : 세로 방향 정렬
+    */
+}
