@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice24</title>
+    <style>
+        body{
+            line-height: 1.5;
+            background: #dadada;
+        }
+
+        /* 컨테이너 없는 영역 */
+        .no-container-area{
+            background: #fff;
+            border-bottom: 2px solid #999;
+            padding: 16px;
+            margin-bottom: 10px;
+        }
+
+        /* 컨테이너 개념 사용한 영역 */
+        .container{
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow:  0 4px 12px rgba(0,0,0,0.1);
+        }
+</style>
+</head>
+<body>
+    <div class="no-container-area">
+        <div class="section-title">컨테이너 없이 만든 영역</div>
+        <div class="text-block">
+            이 영역은 화면 전체 너비를 그냥 사용한다.
+            큰 모니터에서 보면 줄 길이가 너무 길어서 읽기 불편하다.
+            또한 본문이 왼쪽 위에만 붙어 있어서 디자인 적으로 답답해 보인다.
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="section-title">컨테이너를 사용한 영역</div>
+        <div class="text-block">
+            이 영역은 Max-Width로 너비가 제한되어 본문 줄 길이가 적당하다.
+            Margin : 0 Auto 덕분에 화면 가운데 배치되어 훨씬 안정적으로 보인다.
+            Padding으로 내부 여백을 줬기 때문에 텍스트가 박스 테두리에 붙지 않는다.
+            Border-Radius와 Box-Shadow로 카드처럼 보이는 것도 요즘 트렌드 디자인이다.
+        </div>
+    </div>
+</body>
+</html>
