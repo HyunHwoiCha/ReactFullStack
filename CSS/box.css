@@ -1,9 +1,20 @@
-.box{
-    width: 200px;
-    height: 100px;
-    background: #74b9ff;
-    color: white;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 8px;
-}
+    .box{
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        color: white;
+        margin: 10px;
+        border-radius: 5px;
+    }
+
+    .a{
+        background-color: yellowgreen;
+    }
+
+    .b{
+        background-color: violet;
+    }
+
+    .c{
+        background-color: cornflowerblue;
+    }
