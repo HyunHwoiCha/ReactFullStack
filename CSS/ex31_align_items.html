@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="box.css" rel="stylesheet">
+    <style>
+        .flex-demo{
+            display: flex;
+            flex-wrap: wrap;
+            border: 2px dashed #000;
+            background: #ecf0f1;
+            width: 100%;
+            max-width: 600px;
+            height: 800px;
+            margin-bottom: 20px;
+        }
+
+        .ai-stretch{
+            align-items: stretch;
+        }
+
+        .ai-flex-start{
+            align-items: flex-start;
+        }
+
+        .ai-flex-end{
+            align-items: end;
+        }
+
+        .ai-center{
+            align-items: center;
+        }
+
+        .ai-baseline{
+            align-items: baseline;
+        }
+
+        .a{
+            font-size: 30px;
+        }
+
+        .b{
+            font-size: 50px;
+        }
+
+        .c{
+            font-size: 10px;
+        }
+
+        .d{
+            font-size: 90px;
+        }
+    </style>
+</head>
+<body>
+    <h2>stretch</h2>
+    <section class="flex-demo ai-stretch">
+        <div class="box a">A</div>
+        <div class="box b">B</div>
+        <div class="box c">C</div>
+        <div class="box d">D</div>
+        <div class="box e">E</div>
+        <div class="box f">F</div>
+        <div class="box a">A</div>
+        <div class="box b">B</div>
+        <div class="box c">C</div>
+        <div class="box d">D</div>
+        <div class="box e">E</div>
+        <div class="box f">F</div>
+    </section>
+
+    <h2>flex-start</h2>
+    <section class="flex-demo ai-flex-start">
+        <div class="box a">A</div>
+        <div class="box b">B</div>
+        <div class="box c">C</div>
+        <div class="box d">D</div>
+    </section>
+
+    <h2>flex-end</h2>
+    <section class="flex-demo ai-flex-end">
+        <div class="box a">A</div>
+        <div class="box b">B</div>
+        <div class="box c">C</div>
+        <div class="box d">D</div>
+    </section>
+
+    <h2>center</h2>
+    <section class="flex-demo ai-center">
+        <div class="box a">A</div>
+        <div class="box b">B</div>
+        <div class="box c">C</div>
+        <div class="box d">D</div>
+    </section>
+
+    <h2>baseline</h2>
+    <section class="flex-demo ai-baseline">
+        <div class="box a">A</div>
+        <div class="box b">B</div>
+        <div class="box c">C</div>
+        <div class="box d">D</div>
+    </section>
+
+</body>
+</html>
