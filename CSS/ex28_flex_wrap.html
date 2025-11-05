@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="box.css" rel="stylesheet">
+    <style>
+        section{
+            display: flex;
+        }
+
+        .nowrap{
+            flex-wrap: nowrap;
+        }
+
+        .wrap{
+            flex-wrap: wrap;
+        }
+
+        .wrap-reverse{
+            flex-flow: row-reverse wrap-reverse;
+        }
+    </style>
+</head>
+<body>
+    <h2>nowrap</h2>
+    <section class="nowrap">
+        <div class="box a">01</div>
+        <div class="box b">02</div>
+        <div class="box c">03</div>
+        <div class="box d">04</div>
+        <div class="box e">05</div>
+        <div class="box f">06</div>
+    </section>
+
+    <h2>wrap</h2>
+    <section class="wrap">
+        <div class="box a">01</div>
+        <div class="box b">02</div>
+        <div class="box c">03</div>
+        <div class="box d">04</div>
+        <div class="box e">05</div>
+        <div class="box f">06</div>
+    </section>
+
+    <h2>wrap-reverse</h2>
+    <section class="wrap-reverse">
+        <div class="box a">01</div>
+        <div class="box b">02</div>
+        <div class="box c">03</div>
+        <div class="box d">04</div>
+        <div class="box e">05</div>
+        <div class="box f">06</div>
+    </section>
+    
+</body>
+</html>
