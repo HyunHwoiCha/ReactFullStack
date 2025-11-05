@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="box.css" rel="stylesheet">
+    <style>
+        section{
+            display: flex;
+        }
+        /* 왼쪽에 정렬 */
+        .flex-start{
+            justify-content: flex-start;
+        }
+        /* 가운데 정렬 */
+        .flex-center{
+            justify-content: center;
+        }
+        /* 오른쪽에 정렬 */
+        .flex-end{
+            justify-content: flex-end;
+        }
+        /* 첫번째와 마지막은 끝에 정렬,
+            나머지는 균등한 간격으로 정렬
+        */
+        .space-between{
+            justify-content: space-between;
+        }
+        /* 모든 item 균등한 간격으로 정렬 */
+        .space-around{
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+    <h1>justify-content 실습</h1>
+
+    <h2>flex-start</h2>
+    <section class="flex-start">
+        <div class="box a">01</div>
+        <div class="box b">02</div>
+        <div class="box c">03</div>
+        <div class="box d">04</div>
+        <div class="box e">05</div>
+        <div class="box f">06</div>
+    </section>
+
+    <h2>flex-center</h2>
+    <section class="flex-center">
+        <div class="box a">01</div>
+        <div class="box b">02</div>
+        <div class="box c">03</div>
+        <div class="box d">04</div>
+        <div class="box e">05</div>
+        <div class="box f">06</div>
+    </section>
+
+    <h2>flex-end</h2>
+    <section class="flex-end">
+        <div class="box a">01</div>
+        <div class="box b">02</div>
+        <div class="box c">03</div>
+        <div class="box d">04</div>
+        <div class="box e">05</div>
+        <div class="box f">06</div>
+    </section>
+
+    <h2>space-between</h2>
+    <section class="space-between">
+        <div class="box a">01</div>
+        <div class="box b">02</div>
+        <div class="box c">03</div>
+        <div class="box d">04</div>
+        <div class="box e">05</div>
+        <div class="box f">06</div>
+    </section>
+    
+    <h2>space-around</h2>
+    <section class="space-around">
+        <div class="box a">01</div>
+        <div class="box b">02</div>
+        <div class="box c">03</div>
+        <div class="box d">04</div>
+        <div class="box e">05</div>
+        <div class="box f">06</div>
+    </section>
+</body>
+</html>
