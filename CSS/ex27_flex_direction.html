@@ -8,16 +8,55 @@
     <style>
         section{
             display: flex;
+            border: 1px dashed black;
+            margin-bottom: 30px;
+        }
+
+        .row{
+            flex-direction: row;
+        }
+
+        .row-reverse{
+            flex-direction: row-reverse;
+        }
+
+        .column{
+            flex-direction: column;
+        }
+
+        .column-reverse{
+            flex-direction: column-reverse;
         }
 
     </style>
 </head>
 <body>
-    <section>
+    <h3>low</h3>
+    <section class="row">
+        <div class="box a">01</div>
+        <div class="box b">02</div>
+        <div class="box c">03</div>
+    </section>
+
+    <h3>low-reverse</h3>
+    <section class="row-reverse">
         <div class="box a">01</div>
         <div class="box b">02</div>
         <div class="box c">03</div>
     </section>
     
+    <h3>column</h3>
+    <section class="column">
+        <div class="box a">01</div>
+        <div class="box b">02</div>
+        <div class="box c">03</div>
+    </section>
+
+    <h3>column-reverse</h3>
+    <section class="column-reverse">
+        <div class="box a">01</div>
+        <div class="box b">02</div>
+        <div class="box c">03</div>
+    </section>
 </body>
 </html>
