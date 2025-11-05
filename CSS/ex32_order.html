@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="box.css" rel="stylesheet">
+    <style>
+        .container{
+            display: flex;
+            border: 2px dashed black;
+        }
+
+        .o1{
+            order: 1;
+        }
+
+        .o2{
+            order: 2;
+        }
+
+        .o3{
+            order: 3;
+        }
+
+        .o4{
+            order: 4;
+        }
+    </style>
+</head>
+<body>
+    <h2>기본 순서</h2>
+    <div class="container">
+        <div class="box a">A</div>
+        <div class="box b">B</div>
+        <div class="box c">C</div>
+        <div class="box d">D</div>
+    </div>
+
+    <h2>order로 재 배치</h2>
+    <div class="container">
+        <div class="box a o2">A</div>
+        <div class="box b o1">B</div>
+        <div class="box c o4">C</div>
+        <div class="box d o3">D</div>
+    </div>
+    
+</body>
+</html>
