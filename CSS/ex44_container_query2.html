@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>컨테이너 쿼리2</title>
+    <style>
+        .cards{
+            display: flex;
+            flex-wrap: wrap;
+            gap : 12px;
+            container : cards/ inline-size;
+            justify-content: center;
+            padding: 10px;
+            border : 1px dashed #555;
+        }
+
+        .card{
+            flex: 1 1 100%;
+            padding: 20px;
+            border-radius: 8px;
+            background: #3498db;
+            color: white;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        @container cards (min-width : 600px){
+            .card{
+                flex: 1 1 calc(50% - 12px);
+            }
+        }
+
+        @container cards (min-width : 900px){
+            .card{
+                flex: 1 1 calc(33.333% - 12px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="cards">
+        <article class="card">카드 1</article>
+        <article class="card">카드 2</article>
+        <article class="card">카드 3</article>
+        <article class="card">카드 4</article>
+    </section>
+
+    <div style="width: 400px; border: 2px solid #555; margin : 20px auto;">
+        <section class="cards">
+            <article class="card">카드 1</article>
+            <article class="card">카드 2</article>
+            <article class="card">카드 3</article>
+            <article class="card">카드 4</article>
+        </section>
+    </div>
+</body>
+</html>

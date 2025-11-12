@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>컨테이너 쿼리</title>
+    <style>
+        body{
+            margin: 0;
+        }
+
+        .outer{
+            border: 3px solid #2980b9;
+            margin: 20px;
+            padding: 10px;
+            width: 400px;
+        }
+
+        .inner{
+            background: #d6eaf8;
+            padding: 20px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        @media(min-width : 700px){
+            .inner{
+                background: #a9cce3;
+                font-size: 22px;
+
+            }
+        }
+
+        .outer{
+            container-type: inline-size;
+        }
+
+        @container(min-width : 500px){
+            .inner{
+                background: #ff0000;
+                color: white;
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">컨테이너 쿼리 vs 미디어 쿼리</div>
+    </div>
+    
+</body>
+</html>

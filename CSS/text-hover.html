@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text 애니매이션 실습</title>
+    <style>
+        /* h1 태그에 마우스를 올렸을 때
+            글자 색이 빨강색으로 변하고
+            글자 간격이 4px 증가
+        */
+        h1{
+            text-align: center;
+            font-size: 60px;
+            transition: color 0.8s ease,letter-spacing 0.8s ease;
+        }
+
+        h1:hover{
+            color: darkred;
+            letter-spacing: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hover Text</h1>
+</body>
+</html>

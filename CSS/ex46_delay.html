@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 애니매이션 딜레이 실습</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .btn{
+            background: #3b82f6;
+            color: white;
+            font-size: 18px;
+            padding: 16px 32px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition-property: background-color, transform;
+            transition-duration: 0.3s;
+            transition-delay: 0.1s;
+         /* transition : background-color 0.3s 0.1s, transform 0.3s 0.1s; */
+        }
+
+        .btn:hover{
+            background: #1e40af;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <button class="btn">마우스를 올려보세요</button>
+    <div class="info">
+        <p><b>transition-delay</b>는 애니매이션이 <b>시작되기 전에 기다리는 시간</b>을 설정한다.</p>
+    </div>
+</body>
+</html>

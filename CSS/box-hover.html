@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box 애니매이션 실습</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body{
+            margin: 0;
+            background: #f7f8fa;
+            color : #2c3e50;
+        }
+
+        .wrap{
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 16px;
+        }
+
+        .card{
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            padding: 20px;
+            border-radius: 10px;
+            line-height: 1.6;
+            transform: translateY(0);
+            box-shadow: 0 0 0 rgba(0,0,0,0);
+            transition-property: transform,box-shadow;
+            transition-duration: 1s;
+            transition-delay: 0.2s;
+            transition-timing-function: ease;
+        }
+
+        .card:hover{
+            box-shadow: 3px 6px 6px rgba(88, 88, 88, 0.5);
+            transform: translateY(-7px);
+        }
+
+    </style>
+</head>
+<body>
+    <main class="wrap">
+        <h1>트랜지션 - Hover 카드</h1>
+        <p>마우스를 카드에 올려보면 부드럽게 떠오르는 효과</p>
+        <article class="card">
+            <h2>카드 제목</h2>
+            <p>이 카드는 transform과 box-shadow 속성에 트랜지션이 적용되어 있다.
+            <br>eyunp07@naver.com
+            </p>
+        </article>
+    </main>
+</body>
+</html>

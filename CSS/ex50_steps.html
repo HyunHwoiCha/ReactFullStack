@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스텝 애니매이션 실습</title>
+    <style>
+        body{
+            border: 1px solid;
+            padding: 40px;
+        }
+
+        @keyframes hop{
+            /* from과 to를 이용하여 x좌표가 80px 이동하도록 설정 */
+            from{
+                transform: translateX(0);
+            }
+
+            to{
+                transform: translateX(80px);
+            }
+        }
+
+        /* steps(단계, start or end) */
+        .badge{
+            width: 40px;
+            padding: 10px 14px;
+            color: white;
+            background: black;
+            animation: hop 800ms steps(30,end) infinite alternate;
+        }
+    </style>
+</head>
+<body>
+    <div class="badge">STEP</div>
+</body>
+</html>

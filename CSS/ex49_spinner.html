@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spinner 실습</title>
+    <style>
+        /* div요소를 화면 중앙에 배치하기 */
+
+        /* 키프레임 이름 : spin
+        to : transform : rotate(360deg) */
+
+        /* 박스
+        가로 64 세로 64 모서리 둥글게 50% 
+        테두리 자유 
+        상단 테두리만 색깔 
+        애니매이션 spin 1초 linear infinite
+        */
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @keyframes spin{
+            to{
+                transform: rotate(360deg);
+            }
+        }
+
+        .spinner{
+            width: 64px;
+            height: 64px;
+            border: 6px solid rgb(179, 179, 179);
+            border-top-color : gold;
+            border-radius: 50%;
+            animation: spin 2s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="spinner"></div>
+    
+</body>
+</html>
