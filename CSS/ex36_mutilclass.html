@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>멀티클래스</title>
+    <style>
+        /* 'btn' 이라는 클래스 값을 가진 태그를 선택 */
+        .btn{
+            padding: 10px 16px;
+            border-radius: 8px;
+            font-size: 16px;
+            box-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+        }
+        /* 'primary' 클래스 값을 가진 태그를 선택 */
+        .primary{
+            background: #3498db;
+            color: white;
+        }
+
+        .danger{
+            background: #e74c3c;
+            color: white;
+        }
+
+        .large{
+            font-size: 20px;
+            padding: 12px 18px;
+        }
+
+        /* 'btn', 'primary' 클래스 값을 둘 다 가지고 있는 태그 */
+        .btn.primary{
+            border: 1px solid #21618c;
+        }
+        .btn.danger{
+            border: 1px solid #922b21;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn primary">확인</button>
+    <button class="btn danger">삭제</button>
+    <button class="btn primary large">확인(크게)</button>
+</body>
+</html>

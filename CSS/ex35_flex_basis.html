@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 자식 요소의 기본 크기를 정하는 속성
+        레이아웃 계산에 앞서 grow/shrink로 남는 공간을 나누기 전에 이 요소는
+        기본적으로 이만큼 자리를 차지한다 선언하는 값이다.
+        */
+        .container{
+            display : flex;
+            border: 2px dashed #333;
+            width: 800px;
+            height: 120px;
+        }
+
+        .item{
+            text-align: center;
+            border: 2px solid black;
+            margin: 5px;
+            padding: 10px 0;
+        }
+
+        .a{
+            flex-basis: 100px;
+        }
+
+        .b{
+            flex-basis: 200px;
+        }
+
+        .c{
+            flex-basis: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item a">basis : 100px</div>
+        <div class="item b">basis : 200px</div>
+        <div class="item c">basis : 300px</div>   
+    </div>
+</body>
+</html>

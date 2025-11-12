@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동적 의사 클래스</title>
+    <style>
+/* 한번도 누르지 않은 링크를 가지고 있는 a태그 선택 */
+        a:link{
+            color: #ff0000;
+        }
+/* a태그 */
+        a:visited{
+            color: #00ff00;
+        }
+/* h2태그에 마우스를 올렸을 때 스타일 반영 */
+        h2:hover{
+            color: #e67e22;
+        }
+
+        h2:active{
+            color: cornflowerblue;
+        }
+
+        input:focus{
+            border: 2px solid #2ecc71;
+            outline: none;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h2>동적 의사 클래스 예제</h2>
+    <a href="https://examexample.shop">Example 링크</a>
+    <br><br>
+    <!-- <input> 내용을 입력할 수 있는 태그 -->
+    <input type="text" placeholder="여기에 포커스를 맞춰보세요">
+
+</body>
+</html>

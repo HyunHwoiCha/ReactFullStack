@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEM 방법론</title>
+    <style>
+        /* block */
+        .card{
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 16px;
+            width: 250px;
+            margin: 20px auto;
+            font-family: sans-serif;
+        }
+
+        /* element */
+        .card__title{
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .card__content{
+            color: #555;
+        }
+
+        /* modifier */
+        .card--highlight{
+            background: #fef5e7;
+            border-color: #f39c12;
+        }
+    </style>
+</head>
+<body>
+    <div class="card card--highlight">
+        <div class="card__title card__title--font">공지사항</div>
+        <div class="card__content">다음 주 휴강합니다.</div>
+    </div>
+    
+</body>
+</html>

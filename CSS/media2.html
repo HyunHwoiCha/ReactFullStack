@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 카드 레이아웃 실습</title>
+    <style>
+        section{
+            display: flex;
+        }
+
+        .box{
+            background: #3598db;
+            gap: 10px;
+            padding: 40px;
+            margin: 10px;
+            border-radius: 8px;
+            flex: 1 1 100%;
+            flex-wrap: wrap;
+        }
+
+        .container{
+            flex-direction: column;
+        }
+
+        @media(min-width : 768px){
+            .container{
+                flex-direction: row;
+                flex: 1 1 45%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <section class="container">
+            <div class="box">홈</div>
+            <div class="box">디렉토리</div>
+            <div class="box">태그</div>
+        </section>
+    </header>
+    
+</body>
+</html>

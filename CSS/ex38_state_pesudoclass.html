@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상태 의사 클래스</title>
+    <style>
+        input:disabled{
+            background: cornflowerblue;
+        }
+
+        input:enabled{
+            background: tan;
+        }
+
+        input:checked + label{
+            color: #00ff00;
+            font-weight: 700;
+
+        }
+    </style>
+</head>
+<body>
+    <h2>상태 의사 클래스 실습</h2>
+    <input type="checkbox" id="chk1">
+    <label for="chk1">동의합니다.</label>
+    <br>
+    <input placeholder="입력 가능"><br>
+    <input disabled value="비활성화됨">
+<!-- disabled : 입력하지 못하게 하는 속성
+    value : 'input' 태그에 들어가는 값
+-->
+</body>
+</html>

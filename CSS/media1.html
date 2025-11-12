@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 박스 실습</title>
+    <style>
+        div{
+            background: #3498db;
+            color: white;
+            font-size: 16px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        @media(min-width : 768px){
+            .card{
+                background: #2ecc71;
+                font-size: 20px;
+            }
+        }
+
+        @media(min-width : 1024px){
+            .card{
+                background: #9b59b6;
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">반응형 카드입니다.</div>
+    
+</body>
+</html>

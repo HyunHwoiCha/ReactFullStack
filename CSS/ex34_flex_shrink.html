@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* flex-shrink
+        컨테이너의 폭이 모자랄 때 각 자식 요소들이 얼마나 "더" 줄어들지 비율로 정하는 속성
+        0이면 절대 줄어들지 않음.
+        1이상이면 부족한 공간만큼 비율대로 축소
+        */
+        
+        .container{
+            display: flex;
+            color: white;
+            border: 2px dashed #333;
+            width : 600px;
+        }
+
+        .item{
+            width: 300px;
+            text-align: center;
+            padding: 20px 0;
+            border: 2px solid black;
+            margin: 5px;
+        }
+
+        .a{
+            flex-shrink: 0;
+        }
+
+        .b{
+            flex-shrink: 1;
+        }
+
+        .c{
+            flex-shrink: 3;
+        }
+    </style>
+    <link href="box.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="item a">shrink : 0</div>
+        <div class="item b">shrink : 1</div>
+        <div class="item c">shrink : 3</div>   
+    </div>
+    
+</body>
+</html>
