@@ -1,0 +1,38 @@
+footer{
+    background: #333;
+    color: white;
+}
+
+.foot__nav__list a{
+    text-decoration: none;
+    color: white
+}
+
+
+.foot__nav__list{
+    cursor: pointer;
+    list-style-type: none;
+    display: flex;
+    gap: 3rem;
+    font-size: 0.8rem;
+    padding-top: 1rem;
+}
+
+.foot__title{
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.foot__content{
+    text-align: right;
+    padding-right: 2rem;
+}
+
+.foot__line{
+    width: 100vh;
+    margin: 3rem auto 0;
+    border-top: 1px solid #bbb;
+    padding-bottom: 3rem;
+}
