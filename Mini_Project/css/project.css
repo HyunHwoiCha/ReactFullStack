@@ -67,15 +67,15 @@
     height: 450px;
 }
 
-@media (min-width: 1200px) {
+@media (max-width: 1200px) {
     .project__content{
         column-count: 4;
     }
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     .project__content{
-        column-count: 3;
+        column-count: 1;
     }
 }
 

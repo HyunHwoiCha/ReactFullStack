@@ -7,24 +7,34 @@
     <link href="./css/head.css" rel="stylesheet">
     <link href="./css/about.css" rel="stylesheet">
     <link href="./css/foot.css" rel="stylesheet">
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const menu = document.querySelector(".head__menu");
+        const navList = document.querySelector(".head__nav__list");
+
+        menu.addEventListener("click", () => {
+            navList.classList.toggle("active");
+        });
+    });
+    </script>
 </head>
 <body>
     <!-- 헤더 영역 -->
-    <header class="head">
+    <header class="head" id="Head">
         <!-- Head Nav 영역 -->
-        <div class="head__nav">
-            <nav>
-                <ul class="head__nav__list">
-                    <li><a href="#About">About</a></li>
-                    <li><a href="#Project" src="Project.html">Project</a></li>
-                    <li><a href="#Contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+        <div class="head__menu">&#9776;</div>
+
+        <nav class="head__nav">
+            <ul class="head__nav__list">
+                <li><a href="#About">About</a></li>
+                <li><a href="#Project" src="Project.html">Project</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </nav>
 
         <!-- Head Title -->
         <div class="head__title">
-            <h2>RECORD</h2>
+            <h2><a href="#Head">RECORD</a></h2>
         </div>
 
         <!-- Icon 영역 -->
@@ -44,8 +54,8 @@
 
             <nav>
                 <ul class="about__nav">
-                    <li>Career</li>
-                    <li>Project</li>
+                    <li><a href="./index.html#About">Career</a></li>
+                    <li><a href="./Project.html">Project</a></li>
                 </ul>
             </nav>
 

@@ -10,8 +10,8 @@
     align-items: center;
     position: relative;
 } */
-
 main{
+    padding-top: 3rem;
     color: #333;
 }
 
@@ -79,4 +79,28 @@ main{
     transform: translateX(-50%);
     text-align: left;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media (max-width: 768px) {
+    .main__intro {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .main__intro__content {
+        position: static;
+        transform: none;
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+
+    .main__tech {
+        font-size: 1rem;
+        flex-wrap: wrap;
+        gap: 1.2rem;
+    }
+
+    main {
+        padding-top: 3rem;
+    }
 }

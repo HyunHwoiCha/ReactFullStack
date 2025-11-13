@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const menu = document.querySelector(".head__menu");
+        const navList = document.querySelector(".head__nav__list");
+
+        menu.addEventListener("click", function() {
+            navList.classList.toggle("active");
+        });
+    });
+    </script>
+    <style>
+        .head {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+            padding: 0 1rem;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .head__title a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .head__nav__list {
+            display: flex;
+            list-style: none;
+            gap: 3rem;
+        }
+
+        .head__nav__list a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* 햄버거 버튼 숨김 (PC) */
+        .head__menu {
+            display: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #333;
+        }
+
+        /* 모바일 */
+        @media (max-width: 768px) {
+            .head__nav__list {
+                display: none;       /* 기본 숨김 */
+                flex-direction: column;
+                width: 100%;
+                background: #fff;
+                position: fixed;
+                top: 3rem;           /* 헤더 바로 아래 */
+                left: 0;
+                padding: 1rem 0;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+                z-index: 999;
+            }
+
+            .head__nav__list.active {
+                display: flex;       /* 토글 시 표시 */
+            }
+
+            .head__menu {
+                display: block;      /* 모바일에서 햄버거 표시 */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="head" id="Head">
+        <div class="head__title">
+            <h2><a href="#Head">RECORD</a></h2>
+        </div>
+
+        <!-- 햄버거 메뉴 -->
+        <div class="head__menu">&#9776;</div>
+
+        <nav class="head__nav">
+            <ul class="head__nav__list">
+                <li><a href="#About">About</a></li>
+                <li><a href="#Project">Project</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>
