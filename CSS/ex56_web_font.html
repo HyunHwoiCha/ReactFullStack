@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 폰트 서버에 사전 연결을 통해서 로딩을 좀 더 빠르게 한다. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Noto Sans KR 가변 폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Noto+Sans+KR:wght@300..900&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            --bg : #f7f8fa;
+            --text : #2c3e50;
+            --brand : #111827;
+            --surface : #fff;
+        }
+
+        body{
+            margin : 0;
+            padding: 24px;
+            background: var(--bg);
+            color: var(--text);
+            font-family: "Noto Sans KR", sans-serif;
+        }
+
+        header{
+            background: var(--brand);
+            color: #fff;
+            padding: 16px;
+            border-radius: 12px;
+        }
+
+        .wrap{
+            max-width: 980px;
+            margin: 24px auto;
+        }
+
+        h1{
+            margin: 0 0 8px;
+        }
+
+        .en{
+            font-family: "Inter", sans-serif;
+        }
+
+        .card{
+            background-color: --var(--surface);
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 16px;
+        }
+
+        .weight{
+            display: flex;
+            gap : 12px;
+            flex-wrap: wrap;
+        }
+
+        .w{
+            padding: 8px 12px;
+            background: #eef2ff;
+            border-radius: 8px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <h1>Google Fonts - Noto Sans KR 실습</h1>
+            <p class="en">Inter font for Latin text demo</p>
+        </header>
+
+        <section class="card">
+            <h2>한글 문단</h2>
+            <p>웹 폰트는 사이트의 일관된 타이포그래피를 제공하기 위해 사용한다.
+                <strong>display : swap</strong>을 적용하면 폰트 로딩 전엔 시스템 폰트로
+                먼저 표시한 뒤, 로딩이 끝나면 자연스럽게 교체한다.
+            </p>
+
+            <h3>가변 폰트 가중치 실습</h3>
+            <div class="weight">
+                <span class="w" style="font-weight: 300;">wght 300</span>
+                <br>
+                <span class="w" style="font-weight: 400;">wght 400</span>
+                <br>
+                <span class="w" style="font-weight: 600;">wght 600</span>
+                <br>
+                <span class="w" style="font-weight: 800;">wght 800</span>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2 class="en">Latin pargraph</h2>
+            <p class="en">
+                Inter makes Latin text crisp and readable on screens
+            </p>
+        </section>
+    </div>
+    
+</body>
+</html>
