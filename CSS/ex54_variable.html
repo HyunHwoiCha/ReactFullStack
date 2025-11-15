@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex</title>
+    <style>
+        :root{
+            --bg : #dfdfdf;
+            --text : #333;
+            --brand : #333;
+            --surface : #333;
+            --sub--text : white;
+            --accent : #3495db;
+            --radius : 28px;
+            --space : 16px;
+        }
+
+        /* 많은 요소에서 변수를 사용할 떄
+            변수에 들어있는 값만 바꾸면
+            일괄적으로 바뀌기 때문에 유용함.
+        */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .body{
+            margin: 0;
+            font-family: sans-serif;
+            /* Background 변수 넣기 */
+            background: var(--bg);
+            /* Color도 변수 넣기 */
+            color: var(--text);
+        }
+
+        header{
+            /* background에는 --brand */
+            background: var(--brand);
+            /* padding에는 --space */
+            padding: var(--space);
+            color: var(--sub--text);
+            border-radius: var(--radius);
+        }
+
+        nav a{
+            color: #cdb5e1;
+            margin-right: 12px;
+        }
+
+        main{
+            padding: calc(var(--space) * 2) var(--space);
+        }
+
+        section + section{
+            margin-top: calc(var(--space) * 2);
+        }
+
+        /* 카드를 가로로 배치
+            너비가 좁아지면 내려갈 수 있게
+            Gap은 --space 만큼
+            주축으로 가운데 정렬하기
+        */
+        .cards{
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space);
+            justify-content: center;
+        }
+
+        /* 늘어나는 비율 1, 감소하는 비율 1, 기본 너비 240px
+            배경색은 --surface, 테두리, 테두리 둥글게 --radius만큼
+            padding --space, 박스 그림자 주기
+            최대 넓이를 360px로 제한하기
+        */
+        .card{
+            flex: 1 1 240px;
+            background: var(--surface);
+            border: 2px solid #333;
+            border-radius: var(--radius);
+            padding: var(--space);
+            box-shadow: 1px 3px 6px rgba(0,0,0,0.5);
+            max-height: 360px;
+            color: var(--sub--text);
+        }
+
+        .card__title{
+            margin: 0 0 8px;
+        }
+
+        .card__desc{
+            margin : 0 0 var(--space);
+            color: #cdb5e1;
+        }
+
+        .card__a{
+            color: #fff;
+            display: inline-block;
+            background: var(--accent);
+            padding: 8px 12px;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+
+        footer{
+            padding: var(--space);
+            text-align: center;
+            color: var(--text);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="brand">My Record</h1>
+        <nav>
+            <a href="#">홈</a>
+            <a href="#">가이드</a>
+            <a href="#">문의</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2 id="intro-title">CSS 변수로 일관된 디자인 만들기</h2>
+            <p>기본 구조에 CSS 변수를 이용한 일관된 디자인 넣기</p>
+        </section>
+
+        <section>
+            <h2 id="card-title">카드 목록</h2>
+            <div class="cards">
+                <article class="card">
+                    <h3 class="card__title">카드 1</h3>
+                    <p class="card__desc">설명 텍스트다.</p>
+                    <a class="card__a" href="#">자세히</a>
+                </article>
+
+                <article class="card">
+                    <h3 class="card__title">카드 2</h3>
+                    <p class="card__desc">설명 텍스트다.</p>
+                    <a class="card__a" href="#">자세히</a>
+                </article>
+
+                <article class="card">
+                    <h3 class="card__title">카드 3</h3>
+                    <p class="card__desc">설명 텍스트다.</p>
+                    <a class="card__a" href="#">자세히</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <small>&copy; 2025 My Record</small>
+    </footer>
+    
+</body>
+</html>

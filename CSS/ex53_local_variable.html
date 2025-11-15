@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX</title>
+    <style>
+        /* 1. 전역 변수 선언 */
+        /* 전역 변수 : 프로그램 전체에서 접근할 수 있는 변수
+            어디에서든 값을 읽거나 바꿀 수 있다.
+        */
+        :root{
+            --main-color : #3495db;
+            --text-color : #2c3e50;
+            --radius : 8px;
+        }
+
+        .card{
+            border: 2px dashed var(--main-color);
+            border-radius: var(--radius);
+            color: var(--text-color);
+            padding: 16px;
+            width: 200px;
+            margin: 10px;
+            text-align: center;
+        }
+        /* 부분 재정의
+            특정 구역에서 CSS변수를 재 정의하게 되면
+            전역 변수보다 먼저 적용된다.
+        */
+        .card.warning{
+            --main-color : #e67f;
+        }
+        /*
+            지역 변수 : 특정 구역 안에서 만들어진 변수
+            만들어진 구역 안에서만 사용할 수 있다.
+        */
+        
+    </style>
+</head>
+<body>
+    <div class="card">일반 카드</div>
+    <div class="card warning">경고 카드</div>
+    
+</body>
+</html>

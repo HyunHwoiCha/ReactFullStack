@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex</title>
+    <style>
+        :root{
+            --main--color : #5fff00;
+            --size : 50px;
+            --cursive : 'Satisfy', cursive;
+        }
+
+        .cssVar{
+            color: var(--main--color, #333);
+            font-size: var(--size);
+            font-family: var(--cursive);
+        }
+    </style>
+</head>
+<body>
+    <div class="cssVar">CSS Variable are supe easy to use!</div>    
+</body>
+</html>

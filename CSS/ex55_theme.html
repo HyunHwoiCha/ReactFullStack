@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테마 실습</title>
+    <style>
+        :root{
+            --bg-color : white;
+            --text-color : #111827;
+            --primary-color : #2563eb;
+        }
+
+        /* 다크 테마 */
+        html.dark{
+            --bg-color : #111827;
+            --text-color : #f9fafb;
+            --primary-color : #3b82f6;
+        }
+        
+        body{
+            background: var(--bg-color);
+            color: var(--text-color);
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        
+        button{
+            background: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>테마 예제</h1>
+    <button> 버튼 </button>
+    
+</body>
+</html>
