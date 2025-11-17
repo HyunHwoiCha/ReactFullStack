@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그리드 템플릿</title>
+    <style>
+        .container{
+            /* display : grid; 를 하게되면
+                기본적으로 1행 1열이 있는 그리드 컨테이너가 된다.
+            */
+            display: grid;
+            /* 왼쪽의 영역은 240px,
+                오른쪽 영역은 남은 공간을 다 차지.
+            */
+            grid-template-columns: 240px 1fr;
+            height: 100vh;
+            padding: 15px;
+            gap: 16px;
+        }
+
+        .sidebar{
+            background: #333;
+            color: white;
+            border-radius: 12px;
+            padding: 12px;
+        }
+
+        .content{
+            border: 1px solid #333; 
+            border-radius: 12px;
+            padding: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Sidebar</h2>
+            <p>메뉴 혹은 네비게이션이 들어간다.</p>
+        </aside>
+        <main class="content">
+            <h2>Content</h2>
+            <p>남은 공간을 전부 차지하는 영역이다.</p>
+            <p>본문 내용이 여기에 들어간다.</p>
+
+        </main>
+    </div>
+</body>
+</html>

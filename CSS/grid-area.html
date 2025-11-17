@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그리드 템플릿 연습</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container{
+            display: grid;
+            grid-template-areas: 
+                "header header header header"
+                "hero   hero   promo  promo"
+                "quick  feed   feed   ads"
+                "footer footer footer footer"
+            ;
+            gap: 12px;
+            margin: 0.5rem;
+        }
+
+        header{
+            grid-area: header;
+            background: #333;
+            border-radius: 8px;
+            color: white;
+            padding: 0.5rem;
+        }
+
+        .hero{
+            grid-area: hero;
+            background: #e14d;
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+            height: 25vh;
+        }
+
+        .promo{
+            grid-area: promo;
+            background: #3578db;
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+            height: 25vh;
+        }
+
+        .quick{
+            grid-area: quick;
+            background: #eca;
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+            height: 25vh;
+        }
+
+        .feed{
+            grid-area: feed;
+            border-radius: 8px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .card{
+            background: #888;
+            color: white;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ads{
+            grid-area: ads;
+            background: #caaf;
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+        }
+
+        footer{
+            grid-area: footer;
+            background: #ddd;
+            border-radius: 8px;
+            color: black;
+            padding: 12px;
+        }
+
+        @media (max-width: 767px){
+            .feed{
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 4열 기반에서 일부 요소는 2열, 3열을 병합해서 사용
+        상단 : 네비게이션(전체 너비)
+        두번째 줄 : hero(2열 병합), promo(2열 병합)
+        세번째 줄 : 좌측 1열 : quick-links, 중앙 : feed(2열), 우측 : ads(1열)
+        feed 내부는 중첩 그리드 카드(가로 3열) 배치
+    -->
+    <div class="container">
+        <header>네비게이션</header>
+        <div class="hero">Hero (2열 병합)</div>
+        <div class="promo">Promo (2열 병합)</div>
+        <div class="quick">Quick Links</div>
+        <section class="feed">
+            <div class="card">피드 1</div>
+            <div class="card">피드 2</div>
+            <div class="card">피드 3</div>
+            <div class="card">피드 4</div>
+            <div class="card">피드 5</div>
+            <div class="card">피드 6</div>
+        </section>
+        <div class="ads">광고 영역</div>
+        <footer>Footer - 포털 정보</footer>
+    </div>
+</body>
+</html>

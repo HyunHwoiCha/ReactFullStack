@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그리드 Repeat</title>
+    <style>
+        .container{
+            display: grid;
+            /* grid-template-columns : 1fr 1fr 1fr 1fr와 동일 */
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            padding: 20px;
+        }
+
+        .item{
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.2rem;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1번</div>
+        <div class="item">2번</div>
+        <div class="item">3번</div>
+        <div class="item">4번</div>
+    </div>
+    
+</body>
+</html>

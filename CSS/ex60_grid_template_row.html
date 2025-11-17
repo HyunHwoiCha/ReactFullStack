@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그리드 템플릿</title>
+    <style>
+        .container{
+            display: grid;
+            width: 400px;
+            height: 400px;
+            border: 3px solid #333;
+            gap: 8px;
+            padding: 10px;
+            border-radius: 8px;
+            grid-template-rows: 80px 150px 1fr;
+        }
+
+        .item{
+            background: #333;
+            color: white;
+            padding: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1행 (80px)</div>
+        <div class="item">1행 (150px)</div>
+        <div class="item">1행 (나머지 전부)</div>
+    </div>
+</body>
+</html>

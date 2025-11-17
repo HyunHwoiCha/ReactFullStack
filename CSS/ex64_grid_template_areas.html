@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그리드 템플릿</title>
+    <style>
+        .container{
+            display: grid;
+            /* 영역을 이름으로 배치 */
+            grid-template-areas: 
+                "header header"
+                "sidebar main"
+                "footer footer"
+            ;
+            /* 열 배치 및 너비 설정 */
+            grid-template-columns: 200px 1fr;
+            /* 행 배치 및 높이 설정 */
+            grid-template-rows: 80px 200px 60px;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .box{
+            padding: 20px;
+            font-size: 1.2rem;
+            color: #fff;
+            border-radius: 8px;
+        }
+
+        .header{
+            /* 영역의 이름을 설정 */
+            grid-area: header;
+            background: #333;
+        }
+
+        .sidebar{
+            grid-area: sidebar;
+            background: #999;
+        }
+
+        .main{
+            grid-area: main;
+            background: #555;
+        }
+
+        .footer{
+            grid-area: footer;
+            background: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box header">헤더</div>
+        <div class="box sidebar">사이드 바</div>
+        <div class="box main">메인</div>
+        <div class="box footer">푸터</div>
+    </div>
+</body>
+</html>
