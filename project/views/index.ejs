@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+    <h2 style="text-align: center;">회원 목록</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>이름</th>
+                <th>전화 번호</th>
+                <th>주민 번호</th>
+                <th>보험 명</th>
+                <th>가입 일자</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% members.forEach(member => { %>
+                <tr>
+                    <td><%= member.name %></td>
+                    <td><%= member.Pnumber %></td>
+                    <td><%= member.ssn %></td>
+                    <td><%= member.insurance_name %></td>
+                    <td><%= member.join_date.toISOString().split('T')[0] %></td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</body>
+</html>

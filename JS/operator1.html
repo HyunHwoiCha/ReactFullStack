@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <script>
+    </script>
+    <style>
+    </style>
+</head>
+<body>
+    <script>
+        // 산술 연산자
+        // 두개 이상의 숫자에 대해 계산을 수행할 때 사용하는 연산자
+
+        // +
+        let a = 10;
+        let b = 7;
+        console.log(a + b);
+
+        // 문자열과 같이 쓰면 묵시형 형변환이 일어남.
+        // 문자열 타입으로 처리가 된다.
+
+        // -, *, /, %
+        console.log(a - b);
+        console.log(a * b);
+        console.log(a / b); // 실수의 결과가 나온다.
+
+        // % 나머지 연산자
+        console.log(a % b); // 나머지 값이 나온다.
+
+        // ** 거듭제곱
+        console.log(a ** b); // a의 b제곱
+
+        // 상품 가격과 수량을 이용해 총 금액 구하기
+        let price = 1500; // 물건 1개의 가격
+        let quantity = 4; // 구매 개수
+        let total = price * quantity;
+        console.log(`총 금액 : ${total}`);
+
+        let socre1 = 80;
+        let socre2 = 90;
+        let socre3 = 100;
+
+        // 3개의 점수의 평균을 avg 변수에 저장하고 출력하세요.
+        let avg = (socre1+socre2+socre3) / 3;
+        console.log(`평균 점수 : ${avg}`);
+    </script>
+</body>
+</html>

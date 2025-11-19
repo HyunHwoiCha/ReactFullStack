@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원 등록</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="login-container">
+    <h2>회원 등록</h2>
+    <form action="/members/add" method="POST">
+        <div class="form-group">
+            <label for="name">이름</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="Pnumber">주민번호 앞자리 (6자리)</label>
+            <input type="text" id="Pnumber" name="Pnumber" maxlength="6" required>
+        </div>
+
+        <div class="form-group">
+            <label for="ssn">주민번호 뒷자리 (7자리)</label>
+            <input type="text" id="ssn" name="ssn" maxlength="7" required>
+        </div>
+
+        <div class="form-group">
+            <label for="insurance_name">보험명</label>
+            <input type="text" id="insurance_name" name="insurance_name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="join_date">가입일자</label>
+            <input type="date" id="join_date" name="join_date" required>
+        </div>
+
+        <button type="submit">등록</button>
+    </form>
+    <a href="/members">회원 목록으로</a>
+</div>
+</body>
+</html>

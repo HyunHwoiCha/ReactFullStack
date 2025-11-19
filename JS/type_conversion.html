@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <script>
+    </script>
+    <style>
+    </style>
+</head>
+<body>
+    <script>
+        // 1. 명시적 형 변환
+        // 형변환 함수를 이용한다.
+        // 문자열 타입의 데이터를 정수로 바꿀 때
+        // Number(데이터)
+        console.log(typeof Number("123")); // 123(Number)
+        console.log(typeof Number("3.14")); // 3.14(Number)
+        console.log(typeof Number("    10    ")); // 10(양쪽 공백을 무시)
+        console.log(typeof Number("abc"));  // NaN(Number)
+        console.log(typeof Number("")); // 0()
+        console.log(Number(true));      // 1
+        console.log(Number(false));     // 0
+
+        // parseInt() / parseFloat()
+        // 문자열에서 숫자 부분만 앞에서부터 잘라서 숫자로 만든다.
+        console.log(parseInt("123px"));
+        console.log(parseInt("abc123"));
+
+        // String()
+        // 문자열로 만들어주는 함수
+        console.log(String(123)); // "123"
+        console.log(String(3.14)); // "3.14"
+
+        // Boolean()
+        // 어떤 값이든 boolean타입의 데이터로 바꿔준다.
+        console.log(Boolean(1));//true
+        console.log(Boolean(0));//false
+        console.log(Boolean("hello"));//true
+        console.log(Boolean(""));//false
+        console.log(Boolean(null));//false
+        console.log(Boolean(undefined));//false
+        console.log(Boolean(NaN));//false
+
+        // 암시적 형 변환
+        // JS가 연산을 수행하기 위해 타입을 자동으로 바꾸는 경우
+        // 편리하긴 하지만, 버그의 원인이 되기도 한다.
+
+        // 문자열 + 숫자 => 문자열
+        console.log("10"+20); // "1020"
+        console.log(10+"20"); // "1020"
+        console.log("hello"+1);
+
+        // -, *, / <- +를 제외한 나머지 연산자는 숫자 연산을 시도함.
+        console.log("10"-2);    // 8
+        console.log("10원"-2);  // NaN
+        console.log(2-"10");    // -8
+        console.log("10"*2);    // 20
+        console.log(2*"10");    // 20
+        console.log("10"/2);    // 5
+        console.log(2/"10");    // 0.2
+    </script>
+
+</body>
+</html>
