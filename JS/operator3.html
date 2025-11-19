@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <script>
+    </script>
+    <style>
+    </style>
+</head>
+<body>
+    <script>
+        // 증감 연산자의 기본 개념
+        // ++ : 1 증가
+        // -- : 1 감소
+
+        // 전위 연산자
+        let x = 10;
+        let result = ++x;
+        console.log (result);
+
+        // 후위 연산자
+        // 대입을 한 후에 증감이 이루어진다.
+        let y = 10;
+        let result2 = y++;
+        console.log (result2);
+        console.log (y); // 증감이 반영되어 출력이 된다.
+
+        let a = 5;
+		let b = a++;
+		let c = b;
+
+		console.log (`a : ${a}, b : ${b}, c : ${c}`);
+
+    </script>
+</body>
+</html>

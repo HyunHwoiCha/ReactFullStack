@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <script>
+    </script>
+    <style>
+    </style>
+</head>
+<body>
+    <script>
+        // 논리 연산자의 기본 개념
+        // 앞 뒤엥 오는 논리형 데이터를 연산하는 기능.
+        // && (and) : 앞 뒤로 오는 데이터가 둘 다 true여야 true를 반환.
+        // || (or) : 앞 뒤로 오는 데이터 중 하나라도 true면 true를 반환.
+        // ! (not) : true -> false, false -> true 피연자의 값을 반대로 바꾸어 반환.
+
+        // T && T => T
+        // T && F => F
+        // F && T => F
+        // F && F => F
+
+        // T || T => T
+        // T || F => T
+        // F || T => T
+        // F || F => F
+        let a = true;
+		let b = false;
+
+		let andResult = a && b; // false
+        let orResult = a || b; // true
+        let notResult = !a; // true -> false로 값 변환
+
+        // 논리 연산의 단축 평가
+        // 좌항의 값만으로 결과가 확정되면 우항은 평가하지 않는다.
+
+        let x = 10;
+		let y = 5;
+
+		let result1 = x < y && (x+=1) > y;
+		// 앞의 좌항이 이미 false인 상황에서의 &&(and)는 우항은 실행하지 않는다.
+        let result2 = x > y || (x+=1) > y;
+		// 앞의 좌항이 이미 True인 상황에서의 ||(or)은 우항은 실행하지 않는다.
+    </script>
+</body>
+</html>
