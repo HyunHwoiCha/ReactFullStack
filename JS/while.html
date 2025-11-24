@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <script>
+    </script>
+    <style>
+    </style>
+</head>
+<body>
+    <header>
+    </header>
+
+    <main>
+    </main>
+
+    <footer>
+    </footer>
+
+    <script>
+        // While문
+        // let i = 0; // 시작 값
+        // while (i < 3) {
+		// 	console.log (i);
+		// 	i++;
+        // }
+
+		// for문은 반복해야 하는 횟수를 정확히 알 때
+        // while문은 반복해야 하는 횟수를 모를 때 사용하기 좋다.
+
+        // break, continue
+        // break : 현재 반복을 종료하고 반복문을 빠져나간다.
+        // continue : 현재의 반복을 넘어가고 다음 반복을 실행한다.
+
+        for (let e = 1; e <= 10; e++) {
+			if (e === 5) {
+				console.log ("5에서 멈춘다.");
+				break; // 반복문 완전히 종료
+            }
+			console.log (e);
+        }
+		console.log ("=======for문 - 짝수=======");
+		for (let e = 1; e <= 10; e++) {
+			if (e % 2 !== 0) {
+				continue;
+            }
+			console.log (e);
+		}
+		console.log ("=======for문 - 홀수=======");
+		for (let e = 1; e <= 10; e++) {
+			if (e % 2 === 0) {
+				continue;
+			}
+			console.log (e);
+		}
+		console.log ("=======while문=======");
+		let num = 1;
+		while (num <= 10) {
+			if (num === 5) {
+				console.log ("5에서 종료한다.");
+				break;
+			}
+			console.log (num);
+			num++;
+		}
+		console.log ("=======while문 - 짝수=======");
+		let x = 1;
+		while (x <= 10) {
+			x++;
+			if (x % 2 !== 0) {
+				continue;
+			}
+
+			console.log (x);
+		}
+		console.log ("=======while문 - 홀수=======");
+		let y = 1;
+		while (y < 10) {
+			y++;
+			if (y % 2 === 0) {
+				continue;
+			}
+
+			console.log (y);
+		}
+    </script>
+
+</body>
+</html>

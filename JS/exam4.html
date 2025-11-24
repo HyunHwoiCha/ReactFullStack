@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <script>
+    </script>
+    <style>
+    </style>
+</head>
+<body>
+<header>
+</header>
+
+<main>
+</main>
+
+<footer>
+</footer>
+
+<script>
+    // 1 ~ 27까지 숫자 중 짝수의 갯수와 홀수의 갯수를 각각 출력해주세요.
+    let nVal = 27; // 기준
+    let evenCount = 0;
+	let oddCount = 0;
+	for (let i = 1; i <= nVal; i++) {
+		if (i % 2 !== 0) { oddCount++; } else { evenCount++; }
+    }
+	console.log (`짝수의 갯수 : ${evenCount}`);
+	console.log (`홀수의 갯수 : ${oddCount}`);
+
+	// 구구단에서 조건부 출력
+    // dan 변수에 단을 하나 설정한다.
+    // 구구단을 1부터 9까지 출력하되, 짝수 곱셈 줄만 건너뛰고 나머지만 출력하세요.
+    nVal = 3;
+	for (let dan = nVal; dan <= nVal; dan++) {
+		for (let i = 1; i <= 9; i++) {
+			if (i % 2 === 0) {
+				continue;
+            }
+			document.write (`${dan} x ${i} = ${dan * i}<br>`);
+		}
+    }
+	document.write ("<hr>");
+	for (let dan = nVal; dan <= nVal; dan++) {
+		for (let i = 1; i <= 9; i++) {
+			if (i % 2 !== 0) {
+				continue;
+			}
+			document.write (`${dan} x ${i} = ${dan * i}<br>`);
+		}
+	}
+
+	// 1 ~ 45까지 3의 배수를 제외하고 합계와 평균을 구하기
+    let sum = 0; // 합계를 담을 변수
+	let count = 0; // 갯수를 담기 위한 변수
+	let N = 45; // 기준점
+	for (let i = 1; i <= N; i++) {
+		if (i % 3 === 0) {
+			continue;
+		}
+		sum += i; // sum = sum + i;
+		count++;
+    }
+	console.log (`합계 : ${sum}`);
+	console.log (`평균 : ${sum / count}`);
+
+	// 변수 n에 12340를 대입한다.
+    // 자릿수를 뒤집은 값을 출력하세요.
+    // 12340 -> 4321
+
+    let x = 12340;
+	let x_Reversed = 0; // 거꾸로된 숫자를 집어넣을 변수
+	while (x > 0) {
+		let digit = x % 10;
+		x_Reversed = x_Reversed * 10 + digit; // 뒤집어서 누적
+        x = Math.floor(x / 10) // 맨 뒷자리를 제거
+    }
+	console.log (`뒤집은 숫자 : ${x_Reversed}`);
+	// x에 어떤 숫자가 들어올지 모르기 때문에 for문보다는
+    // while문을 선택하는게 적합하다.
+</script>
+
+</body>
+</html>

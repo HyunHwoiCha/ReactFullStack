@@ -30,6 +30,29 @@
         for (let e = 5; e > 0; e--) {
 			console.log (e);
         }
+
+		// body에 태그를 만드는 것도 가능하다.
+        for (let j = 6; j >= 1; j--) {
+			document.write (`<h${j}>자바스크립트</h${j}>`);
+        }
+		document.write ("<hr>");
+        // 순서가 없는 리스트 그려보기
+        // 내용으로는 안녕X3
+		document.write ("<ul>");
+		for (let j = 1; j <= 3; j++) {
+			document.write ("<li>안녕</li>");
+        }
+		document.write ("</ul>");
+
+		document.write ("<hr>");
+
+		// 구구단 출력하기
+        // 8 X 1 = 8
+        for (let i = 8; i < 9; i++){
+			for (let j = 1; j < 10; j++) {
+				document.write(`${i} x ${j} = ${i * j}<br>`);
+            }
+        }
     </script>
 
 </body>
