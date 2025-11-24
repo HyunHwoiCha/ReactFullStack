@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <script>
+    </script>
+    <style>
+    </style>
+</head>
+<body>
+    <header>
+    </header>
+
+    <main>
+    </main>
+
+    <footer>
+    </footer>
+
+    <script>
+        // 변수 month에 월값을 하나 저장하고,
+        // 해당 월이 몇일까지 있는지 출력하는 코드 작성하기
+        // ex) 2월이라면 "2월은 28일 또는 29일까지 있습니다."
+        // ex) 4월이라면 "4월은 30일까지 있습니다."
+        let month = 12;
+		switch (month) {
+			case 1:case 3:case 5:case 7:case 8:case 10:case 12:
+				console.log (`${month}월은 31일까지 있습니다.`);
+				break;
+			case 4:case 6:case 9:case 11:
+				console.log (`${month}월은 30일까지 있습니다.`);
+				break;
+			case 2:
+				console.log (`${month}월은 28일 또는 29일까지 있습니다.`);
+				break;
+            default:
+				console.log ("1~12까지의 값이 아닙니다.");
+		}
+
+		// score 변수에 점수를 입력받아 등급을 출력하는 코드 작성하기
+        // 100 ~ 90 : A, 89~80 : B, 79 ~ 70 : C, 69 ~ 60 : D, 그 외 : F
+        // 점수가 0 ~ 100 범위를 벗어나면 "유효하지 않은 점수입니다."를 출력하기
+        let score = 100;
+		// switch로 범위 지정 시 연산자의 순위를 잘 지정해야한다.
+		switch (score <= 100 && Math.floor(score/10)) {
+            case 9: case 10:
+				console.log ("A"); break;
+            case 8:
+				console.log("B"); break;
+            case 7:
+				console.log ("C"); break;
+            case 6:
+				console.log ("D"); break;
+            case 5: case 4: case 3: case 2: case 1: case 0:
+				console.log ("F"); break;
+            default:
+				console.log ("유효하지 않은 점수입니다.");
+		}
+
+		// if - else문 안에 switch문 사용도 가능하다.
+		if (score < 0 || score > 100) {
+			console.log ("유효하지 않은 점수입니다.");
+        } else {
+			switch (Math.floor(score/10)) {
+				case 9: case 10:
+					console.log ("A"); break;
+				case 8:
+					console.log("B"); break;
+				case 7:
+					console.log ("C"); break;
+				case 6:
+					console.log ("D"); break;
+				case 5: case 4: case 3: case 2: case 1: case 0:
+					console.log ("F"); break;
+			}
+        }
+
+		// menu라는 변수에 메뉴 번호를 대입한다.
+        // 음료를 선택하면 가격을 출력하는 코드 작성하기
+        // 메뉴
+        // 1 : 아메리카노 1500원
+        // 2 : 라떼 2000원
+        // 3 : 녹차 1800원
+        let menu = 1;
+
+        switch (menu) {
+            case 1:
+                console.log (`${menu} : 아메리카노 1,500원`);
+                break;
+            case 2:
+                console.log (`${menu} : 라떼 2,000원`);
+                break;
+            case 3:
+                console.log (`${menu} : 녹차 1,800원`);
+                break;
+            default:
+				console.log ("잘못된 메뉴 선택입니다.");
+        }
+
+		// hour 변수에 0 ~ 23사이의 시간을 대입하고 시간에 따라
+        // 인사를 출력하는 코드 작성하기
+        // 규칙
+        // 5 ~ 11 : 좋은 아침입니다.
+        // 12 ~ 17 : 좋은 오후입니다.
+        // 18 ~ 21 : 좋은 저녁입니다.
+        // 그 외 : 좋은 밤입니다.
+        // 범위를 벗어난 값은 "유효하지 않은 시각입니다."
+        let hour = 4;
+
+		if (hour < 0 || hour > 23) {
+			console.log ("유효하지 않은 시각입니다.");
+        } else if (hour >= 5 && hour <= 11 ) {
+			console.log ("좋은 아침입니다.");
+        } else if (hour >= 12 && hour <= 17 ) {
+			console.log ("좋은 오후입니다.");
+		} else if (hour >= 18 && hour <= 21 ) {
+			console.log ("좋은 저녁입니다.");
+		} else {
+			console.log ("좋은 밤입니다.");
+        }
+
+		// year 변수에 연도를 하나 대입한다.
+        // 해당 연도가 윤년인지 아닌지를 판별하는 코드 작성하기
+        // 4의 배수이면서 100의 배수가 아니면 된다.
+        // 400의 배수이면 윤년이다.
+        // 그 외에는 평년이다.
+
+        let year = 2024;
+		if (year % 100 !== 0) {
+			if ((year % 4 === 0) || (year % 400 === 0)) {
+				console.log (`${year}년은 윤년입니다.`);
+			}
+		} else {
+				console.log (`${year}년은 평년입니다.`);
+        }
+    </script>
+
+</body>
+</html>

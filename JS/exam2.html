@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <script>
+    </script>
+    <style>
+    </style>
+</head>
+<body>
+    <script>
+        // 농구공이 25개가 있습니다.
+        // 한 박스에 4개씩 담을 수 있다면 필요한 박스의 개수를 구하세요.
+
+        let totalBalls = 4;
+		let boxMax = 4;
+		let divBall = totalBalls / boxMax;
+		let shareBall = totalBalls % boxMax;
+
+		let resultBox = (shareBall === 0) ? divBall :
+                        Math.floor(divBall) + 1;
+		console.log (`result = ${resultBox}`);
+
+		// 영화관에서 학생은 20% 할인된 가격, 성인은 정가를 낸다.
+        // 티켓 가격이 12,000원일 때 나이에 따라 할인된 티켓 가격을 계산하세요.
+        // age = 17; age = 22;
+        // 삼항 연산자로 풀기
+        let age = 17;
+		let ticketPrice = 12000;
+        let resultPrice = (age > 19) ? ticketPrice : ticketPrice*0.8;
+		console.log (`result = ${resultPrice}`);
+
+		// 주문 금액이 30,000원 이상이거나 VIP회원이면 무료 배송이다.
+        // 무료 배송 여부를 불리언 값으로 나타내세요.
+        let orderPrice = 30000;
+		let checkVip = true;
+		let freeDelivery = (orderPrice >= 30000) || (checkVip);
+		console.log (`무료 배송 여부 : ${freeDelivery}`);
+
+		// 현재 온도가 28도 이상이면 "에어컨 작동", 18도 이하면 "난방 작동", 그 사이면
+        // "대기 상태"를 출력하는 프로그램을 작성하세요.
+        // 중첩 삼항 연산자를 사용하세요.
+        let temperature = 29;
+		let printState = (temperature >= 28) ? "에어컨 작동" :
+                         (temperature <= 18) ? "난방 작동" : "대기 상태";
+		console.log (`Current Status : ${printState}`);
+    </script>
+</body>
+</html>

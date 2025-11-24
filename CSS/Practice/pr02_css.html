@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <script>
+    </script>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: #333;
+        }
+        .head__container{
+            background: #fff;
+            border-radius: 8px;
+            margin: 2rem;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            max-width: 1200px;
+        }
+
+        .main__container{
+            max-width: 1200px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .card{
+            background: #fff;
+            margin: 2rem;
+            padding: 2rem;
+            box-shadow: 3px 3px 3px rgba(240, 240, 240, 0.3);
+        }
+        .card:hover{
+            transform: translateY(-5px);
+            background: #ff799b;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header class="head__container">
+        <h1>컨테이너 레이아웃 연습</h1>
+    </header>
+
+    <main class="main__container">
+        <article class="card">
+            <h3>카드 1</h3>
+            <p>내용</p>
+        </article>
+
+        <article class="card">
+            <h3>카드 2</h3>
+            <p>내용</p>
+        </article>
+
+        <article class="card">
+            <h3>카드 3</h3>
+            <p>내용</p>
+        </article>
+    </main>
+
+</body>
+</html>

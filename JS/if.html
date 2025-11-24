@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <script>
+    </script>
+    <style>
+    </style>
+</head>
+<body>
+    <header>
+    </header>
+
+    <main>
+    </main>
+
+    <footer>
+    </footer>
+
+    <script>
+        let age = 17;
+
+		if ( age >= 19 ) {
+			console.log ("성인입니다.");
+		}
+		else {
+			console.log ("성인이 아닙니다.");
+		}
+
+		console.log ("프로그램 종료");
+
+		// if - else문은 삼항 연산자와 같다.
+
+		let isMember = false;
+		if ( isMember ) {
+			console.log ("회원 전용 페이지에 입장 하였습니다.");
+        } else {
+			console.log ("로그인이 필요합니다.");
+        }
+
+		// 여러개의 조건을 비교하고 싶을 때
+        let score = 80;
+        let result = score <= 0 && score >= 100;
+
+		// 2. if - else if - else 문 사용하기
+        if ( score >= 90 ) {
+			console.log ("A");
+        } else if ( score >= 80 ) {
+			console.log ("B");
+        } else if ( score >= 70 ) {
+			console.log ("C");
+        } else if ( score >= 60 ) {
+			console.log ("D");
+        } else {
+			console.log ("F");
+        }
+
+        // 삼항 연산자 위와 같다.
+		// let resultScore = ( score >= 90 ) ? "A" :
+        //                   ( score >= 80 ) ? "B" :
+        //                   ( score >= 70 ) ? "C" :
+        //                   ( score >= 60 ) ? "D" : "F";
+
+        // if문 끼리의 중첩
+        let loggedIn = true;
+		let role = "admin";
+		if ( loggedIn ) {
+			if ( role === "admin" ) {
+				console.log ("관리자 페이지에 접근합니다.");
+            } else {
+				console.log("일반 사용자 페이지에 접근합니다.");
+            }
+        } else {
+			console.log ("로그인이 필요합니다.");
+        }
+
+		// 조건문에서 자주 사용되는 패턴
+        // 1. 짝수, 홀수 판별할 때
+        // 숫자를 2로 나눈 나머지를 가지고 짝수, 홀수를 판단한다.
+        let num = 20;
+		if ( num % 2 === 0 ) {
+			console.log (`${num}은 짝수 입니다.`);
+        } else {
+			console.log (`${num}은 홀수 입니다.`);
+        }
+
+        // 2. 특정 배수 찾기
+        // 특정값으로 나눠 나머지가 0이면 배수임을 알 수 있다.
+        num = 15;
+		if ( num % 3 === 0 ) {
+			console.log (`${num}은 3의 배수 입니다.`);
+        }
+		if ( num % 5 === 0 ) {
+			console.log (`${num}은 5의 배수 입니다.`);
+        }
+
+		// 3. 범위 판별하기
+        // 두 조건을 &&로 연결하는 패턴
+        age = 29;
+		// 25살이 20대인지 판별하여 "20대 입니다."라고 출력하기
+        if ( age >= 20 && age <= 29 ) {
+			console.log ("20대입니다.");
+        } else {
+			console.log ("20대가 아닙니다.");
+        }
+
+		// 4. 특정 문자의 포함 여부
+        // 문자열.includes() 메서드를 사용하여 포함되어 있는지 확인하기
+        let email = "hello@gmail.com";
+		if (email.includes("@")) {
+			console.log ("올바른 이메일 형식입니다.");
+        }
+    </script>
+
+</body>
+</html>

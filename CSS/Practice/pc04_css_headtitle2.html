@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .head{
+            position: fixed;
+            width: 100%;
+        }
+        .head__inner {
+            display: flex;
+            flex: 1 1 50%;
+        }
+
+        .head__title{
+            flex: 1;
+            font-size: 2.3rem;
+            padding-left: 2rem;
+            z-index: 9999;
+        }
+
+        .head__menu {
+            display: flex;
+            flex: 1;
+            padding-right: 2rem;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        .head__menu ul{
+            display: flex;
+            gap: 2rem;
+        }
+        .head__menu li {
+            list-style-type: none;
+        }
+        .head__menu a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .menu__icon{
+            display: none;
+            align-items: center;
+            justify-content: flex-end;
+            font-size: 2rem;
+            flex: 1;
+            padding-right: 2rem;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            padding-top: 5rem;
+            width: 100%;
+            height: 80vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .foot__container {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            height: 20vh;
+            width: 100%;
+            background: #333;
+            color: white;
+        }
+        .foot__content {
+            display: flex;
+            width: 60%;
+        }
+        .foot__contact {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            border: 1px dashed;
+        }
+
+        .foot__title {
+            flex: 1;
+            text-align: right;
+            align-self: flex-end;
+            border: 1px dashed;
+        }
+
+        .foot__line {
+            width: 60%;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            border-top: 1px solid #ddd;
+        }
+
+        .side__menu {
+            display: none;
+            position: fixed;
+            transform: translateX(100%);
+            background: #333;
+            height: 100%;
+            right: 0;
+            color: white;
+            transition: transform 0.6s ease-in-out;
+            z-index: 9999;
+        }
+        .side__menu.active {
+            transform: translateX(0);
+        }
+
+        .close__btn {
+            font-size: 2rem;
+            text-align: left;
+            padding-left: 1.5rem;
+        }
+
+        .side__menu li, a{
+            padding: 1.5rem;
+            list-style-type: none;
+            text-decoration: none;
+            color: white;
+        }
+
+        @media screen and (max-width: 768px) {
+            .menu__icon {
+                display: flex;
+            }
+            .side__menu {
+                display: block;
+            }
+            .head__menu {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="head">
+        <div class="head__inner">
+            <h1 class="head__title">My Website</h1>
+            <div class="menu__icon">&Congruent;</div>
+            <nav class="head__menu">
+                <ul>
+                    <li><a href="#">홈</a></li>
+                    <li><a href="#">서비스</a></li>
+                    <li><a href="#">프로젝트</a></li>
+                    <li><a href="#">문의사항</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="layout">
+        <nav class="side__menu">
+            <div class="close__btn">x</div>
+            <ul>
+                <li><a href="#">홈</a></li>
+                <li><a href="#">서비스</a></li>
+                <li><a href="#">프로젝트</a></li>
+                <li><a href="#">문의사항</a></li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <h2>메인 콘텐츠</h2>
+            <p>여기에 다양한 내용이 들어갑니다.</p>
+        </main>
+    </div>
+
+    <footer class="foot__container">
+        <div class="foot__content">
+            <div class="foot__contact">
+                <p>Tel.여기에 내용을 입력하세요</p>
+                <p>Email.여기에 내용을 입력하세요</p>
+            </div>
+            <p class="foot__title">&copy; My Website</p>
+        </div>
+        <p class="foot__line"></p>
+    </footer>
+
+    <script src="side_bar.js"></script>
+</body>
+</html>

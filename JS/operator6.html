@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <script>
+    </script>
+    <style>
+    </style>
+</head>
+<body>
+    <script>
+        // 삼항 조건 연산자
+        // 조건식? 참일 때 선택 : 거짓일 때 선택;
+        // if - else 문을 한 줄로 줄인 표현이다.
+
+        let score = 85;
+		let result = (score >= 60) ? "합격" : "불합격";
+		console.log (`result : ${result}`);
+		// 조건이 true -> "합격" 선택
+
+        // 삼항 연산자는 중첩이 가능하다
+        let grade = (score >= 90) ? "A" :
+                    (score >= 80) ? "B" :
+                    (score >= 70) ? "C" :
+                    (score >= 60) ? "D" : "F";
+		console.log (`grade : ${grade}`);
+    </script>
+</body>
+</html>

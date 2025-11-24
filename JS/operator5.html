@@ -43,6 +43,22 @@
 		// 앞의 좌항이 이미 false인 상황에서의 &&(and)는 우항은 실행하지 않는다.
         let result2 = x > y || (x+=1) > y;
 		// 앞의 좌항이 이미 True인 상황에서의 ||(or)은 우항은 실행하지 않는다.
+
+        // 피연산자가 boolean이 아닐 때
+        // 자바스크립트에서는 true/false 이외의 값도
+        // Truthy / Falsy 로 판단한다.
+        // 0, '', null, undefined, naN -> False로 취급한다.
+
+        let l1 = 0;
+		let l2 = "Hello";
+
+		// 앞의 값이 Falsy이면 뒤의 값을 반환한다.
+		let result3 = l1 || l2; // "Hello"
+        console.log(`result3 : ${result3}`);
+
+		// 앞의 값이 truthy면 뒤의 값을 반환한다.
+        let result4 = l2 && l1; // 0
+		console.log (`result4 : ${result4}`);
     </script>
 </body>
 </html>
