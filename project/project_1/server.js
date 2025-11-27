@@ -12,11 +12,11 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
 // 정적 파일
-app.use("/css", express.static(path.join(__dirname, "css")));
+app.use("/CSS", express.static(path.join(__dirname, "CSS")));
 app.use("/js", express.static(path.join(__dirname, "js")));
 
 // POST 데이터 처리
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 // 프록시 뒤 세션 처리
@@ -25,7 +25,11 @@ app.use(session({
     secret: "secret-key",
     resave: false,
     saveUninitialized: false,
-    cookie: { secure: false } // HTTPS 프록시 뒤에서는 false 유지
+    cookie: {
+		secure: false, // HTTPS 동작 시 true 필요
+		httpOnly : true,
+		sameSite : 'lax'
+	}
 }));
 
 // 라우터 연결
@@ -38,6 +42,7 @@ app.use((req, res) => {
 });
 
 const PORT = 3000;
-app.listen(PORT, () => {
+
+app.listen(PORT, '0.0.0.0', () => {
     console.log(`Node.js 서버 실행 : http://127.0.0.1:${PORT}`);
 });

@@ -1,0 +1,219 @@
+:root {
+    --primary-color: #333;          /* 메인 어두운 포인트 */
+    --secondary-color: #444;        /* 부차 어두운 배경 */
+    --accent-color: #333;           /* 버튼 강조 색상 */
+    --bg-color: #f4f4f4;            /* 전체 배경 */
+    --container-bg: #fff;           /* 카드 배경 */
+    --text-color: #222;             /* 일반 텍스트 */
+    --text-light: #fff;             /* 버튼 텍스트 */
+    --border-color: #ccc;
+    --border-radius: 10px;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --input-padding: 10px;
+    --box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* 기본 모바일 스타일 */
+
+/* 컨테이너 */
+.container, .login-container, .form-container {
+    width: 95%;
+    max-width: 400px;
+    margin: 15px auto;
+    padding: 15px;
+    background-color: var(--container-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+/* 제목 */
+h2 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+/* 버튼 */
+.btn, .btn-detail, form button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: var(--border-radius);
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease;
+    font-size: 14px;
+}
+
+/* 버튼 색상 */
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+.btn-primary:hover {
+    background-color: #111;
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+}
+.btn-secondary:hover {
+    background-color: #333;
+}
+
+.btn-detail {
+    background-color: var(--accent-color);
+    color: var(--text-light);
+    margin: 5px 0;
+}
+.btn-detail:hover {
+    background-color: #555;
+}
+
+/* 체크박스 */
+input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+/* Form */
+.form-container {
+    margin-top: 15px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"] {
+    width: 100%;
+    padding: var(--input-padding);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    transition: all 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 5px rgba(26,115,232,0.3);
+}
+
+/* 입력창 inline */
+.input-inline input {
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+/* 테이블 */
+table, .member-table, .detail-table {
+    display: block;
+    overflow-x: auto;
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+    white-space: nowrap;
+}
+
+table th, table td {
+    padding: 6px 8px;
+    font-size: 13px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+}
+
+table th {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+table tbody tr:hover {
+    background-color: rgba(26,115,232,0.1);
+}
+
+/* 상세 테이블 */
+.detail-table th {
+    width: 35%;
+    text-align: right;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.detail-table td {
+    text-align: left;
+}
+
+/* Top actions */
+.top-actions {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* 데스크톱 스타일 */
+@media screen and (min-width: 769px) {
+    .container, .login-container, .form-container {
+        max-width: 1200px;
+        padding: 25px;
+        margin: 30px auto;
+    }
+
+    h2 {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+
+    .btn, .btn-detail, form button[type="submit"] {
+        width: auto;
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    table th, table td {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .input-inline input {
+        width: auto;
+        margin-right: 5px;
+    }
+
+    .top-actions {
+        text-align: right;
+    }
+
+    .login-container input[type="text"],
+    .login-container input[type="password"] {
+        width: 300px;
+        padding: 10px;
+    }
+
+    .login-container button {
+        width: auto;
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}

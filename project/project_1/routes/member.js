@@ -14,5 +14,13 @@ function isAdmin(req, res, next) {
 router.get("/", isAdmin, memberController.getMembers);
 router.get("/add", isAdmin, memberController.addMemberPage);
 router.post("/add", isAdmin, memberController.addMemberProcess);
+// 회원 상세 페이지
+router.get("/view/:id", isAdmin, memberController.getMemberById);
+// 회원 수정 페이지
+router.get("/edit/:id", isAdmin, memberController.editMemberPage);
+router.post("/edit/:id", isAdmin, memberController.editMemberProcess);
+// 회원 삭제
+router.get("/delete/:id", isAdmin, memberController.deleteMember);
+router.post("/delete", isAdmin, memberController.deleteSelectedMembers);
 
 module.exports = router;

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>회원 수정</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>회원 수정</h2>
+
+    <form action="/members/edit/<%= member.id %>" method="POST" class="form-container">
+
+        <!-- 이름 -->
+        <div class="form-group">
+            <label>이름</label>
+            <input type="text" name="name" value="<%= member.name %>" required>
+        </div>
+
+        <!-- 성별 -->
+        <div class="form-group">
+            <label>성별</label><br>
+            <label><input type="radio" name="gender" value="남성" <%= member.gender === '남성' ? 'checked' : '' %>> 남성</label>
+            <label><input type="radio" name="gender" value="여성" <%= member.gender === '여성' ? 'checked' : '' %>> 여성</label>
+        </div>
+
+        <!-- 전화번호 -->
+        <div class="form-group input-inline">
+            <label>전화번호</label>
+
+            <% const p1 = member.PnumberRaw.substring(0,3); %>
+            <% const p2 = member.PnumberRaw.substring(3,7); %>
+            <% const p3 = member.PnumberRaw.substring(7,11); %>
+
+            <input type="text" maxlength="3" name="Pnumber1" value="<%= p1 %>" required> -
+            <input type="text" maxlength="4" name="Pnumber2" value="<%= p2 %>" required> -
+            <input type="text" maxlength="4" name="Pnumber3" value="<%= p3 %>" required>
+        </div>
+
+        <!-- 주민번호 앞자리 -->
+        <div class="form-group input-inline">
+            <label>주민번호 (앞 6자리)</label>
+            <input type="text" maxlength="6" name="ssn" value="<%= member.ssn %>">
+        </div>
+
+        <!-- 지역 다중 체크 -->
+        <div class="form-group">
+            <label>지역 배정 가능</label><br>
+
+            <% const regionsArr = member.regions ? member.regions.split(",") : []; %>
+
+            <% ["서울","경기도","인천","강원도","충청도","전라도","경상도"].forEach(r => { %>
+                <label style="margin-right:10px;">
+                    <input type="checkbox" name="regions" value="<%= r %>"
+                            <%= regionsArr.includes(r) ? "checked" : "" %>>
+                    <%= r %>
+                </label>
+            <% }) %>
+        </div>
+
+        <!-- 보험명 -->
+        <div class="form-group">
+            <label>보험명</label>
+            <input type="text" name="insurance_name" value="<%= member.insurance_name %>">
+        </div>
+
+        <!-- 가입일자 -->
+        <div class="form-group">
+            <label>가입일자</label>
+            <input type="date" name="join_date" value="<%= member.join_dateRaw %>">
+        </div>
+
+        <button type="submit" class="btn btn-primary">수정 완료</button>
+    </form>
+
+    <div class="top-actions">
+        <a href="/members/view/<%= member.id %>" class="btn btn-secondary">상세페이지로</a>
+    </div>
+</div>
+
+</body>
+</html>

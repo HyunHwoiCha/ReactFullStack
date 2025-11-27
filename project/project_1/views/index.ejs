@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원 목록</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+</head>
+<body>
+<div class="container">
+    <h2>회원 목록</h2>
+    <div class="top-actions">
+        <a href="/members/add" class="btn btn-primary">회원 등록</a>
+    </div>
+
+    <form action="/members/delete" method="POST" onsubmit="return confirm('선택한 회원을 삭제하시겠습니까?');">
+
+    <table class="member-table">
+        <thead>
+        <tr>
+            <th><input type="checkbox" id="checkAll" onclick="toggleAll(this)"> 전체 선택</th>
+            <th>이름</th>
+            <th>성별</th>
+            <th>전화번호</th>
+            <th>생년월일</th>
+            <th>지역 배정 여부</th>
+            <th>보험명</th>
+            <th>가입일자</th>
+            <th>상세보기</th>
+            <th>수정</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% members.forEach(member => { %>
+            <tr>
+                <td>
+                    <input type="checkbox" name="memberIds" value="<%= member.id %>">
+                </td>
+                <td><%= member.name %></td>
+                <td><%= member.gender || '미입력' %></td>
+                <td><%= member.Pnumber || '미입력' %></td>
+                <td><%= member.ssn || '미입력' %></td>
+                <td>
+                    <% if (member.regions && member.regions.length) { %>
+                        <%= member.regions.join(', ') %>
+                    <% } else { %>
+                        미입력
+                    <% } %>
+                </td>
+                <td><%= member.insurance_name || '미입력' %></td>
+                <td><%= member.join_date || '미입력' %></td>
+                <td><a href="/members/view/<%= member.id %>" class="btn btn-detail">보기</a></td>
+                <td><a href="/members/edit/<%= member.id %>" class="btn btn-detail">수정</a></td>
+            </tr>
+        <% }) %>
+        </tbody>
+    </table>
+
+    <button type="submit">삭제</button>
+
+    </form>
+    <script>
+		document.getElementById('deleteForm').addEventListener('submit', function(e) {
+			const checked = document.querySelectorAll("input[name='memberIds']:checked");
+			if (!checked.length) {
+				alert('삭제할 회원을 선택해주세요.');
+				e.preventDefault();
+			}
+		});
+    </script>
+</div>
+</body>
+</html>
