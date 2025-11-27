@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <script>
+    </script>
+    <style>
+    </style>
+</head>
+<body>
+<header>
+</header>
+
+<main>
+</main>
+
+<footer>
+</footer>
+
+<script>
+    // 객체
+    // 현실세계의 사물을 디지털(코드)로 표현하기 위한 방법.
+    // 여러 데이터를 하나로 묶어서 저장하는 구조
+
+    // 예를 들어 사람의 정보를 변수로만 저장을 한다면
+
+	// person1 하나의 객체 안에 '사람의 정보'가 다 들어있음.
+	let person1 = {
+		name: "홍길동",
+        age: 25,
+        job: "개발자"
+    }
+
+	// 객체의 기본 구조
+    /*
+    * let 객체 이름 = {
+    *     키1: 값1,  -> property
+    *     키2: 값2,
+    *     키3: 값3
+    * }
+    * */
+    // 각각의 프로퍼티(속성)는 콤마로 구분
+    // 키는 따옴표로 묶지 않는다.
+
+    // 객체의 값 꺼내기
+    // 1. 점 표기법
+    // 객체이름.키 => 키에 할당된 VALUE를 표출
+	console.log (person1.name);
+
+	//2. 대괄호 표기법
+    // 객체이름["키"] => 키에 할당된 VALUE를 표출
+	console.log (person1["job"]);
+
+	// new Object() -> 생성자
+    // 비어있는 객체 리터럴(=> {})을 만드는 것과 같다.
+    let user = new Object();
+
+	// 없는 프로퍼티에 키와 값을 넣으면 추가
+    user.name = "김자바";
+	user.age = 20;
+
+	console.log (user);
+
+	// 객체에서 프로퍼티를 삭제하는 방법
+    delete user.age;
+	console.log (user);
+
+    // in : 특정 프로퍼티가 객체에 포함되어 있는지 검사하는 연산자
+    // 있으면 true, 없으면 false
+    console.log('name' in user);
+
+	// for in
+    // 객체에 포함된 모든 프로퍼티에 대해 순회가 가능
+    // 키가 변수로 들어오게 됨. 따라서 키를 호출함에 따라 VALUE가 표출.
+    for (i in person1) {
+		console.log (`${i} : ${person1[i]}`);
+    }
+
+	// 객체의 VALUE로 또 다른 객체가 들어갈 수 있다.
+    let circle = {
+		center: {x: 1.0, y: 2.0},
+        radius: 2.5
+    }
+	// 객체의 VALUE에 또 다른 객체가 들어있을 때 VALUE에 접근하는 방법
+	console.log (circle.center.x);
+
+	// 객체 안에 포함된 함수 - 메서드
+    let member = {
+		name: "민수",
+        age: 25,
+        sayHello: function () { // 메서드를 정의
+			console.log (`안녕하세요! 저는 ${this.name}입니다.`);
+        },
+		saySomething() { // 축약 문법
+			console.log ("만나서 반갑습니다.");
+        },
+		growOlder() {
+			this.age++;
+			console.log (`이제 ${this.age}살이 되었습니다.`);
+        }
+    }
+
+	// 메서드를 사용하기 위해서는 정의된 메서드를 호출해야 한다.
+    // 메서드를 호출하는 방법
+
+    // 객체이름.메서드명();
+    member.sayHello();
+	member.saySomething();
+	member.growOlder();
+
+	// calculator 라는 이름의 객체를 만들어라.
+    // add(a,b) : 두 수 a와 b를 더한 값을 출력.
+    // subtract(a,b) : 두 수 a와 b의 차를 출력.
+    // multiply(a,b) : 두 수 a와 b의 곱을 출력.
+    // divide(a,b) : 두 수를 나눈 값을 출력하되,
+    // b가 0이면 "0으로 나눌 수 없습니다." 출력.
+
+    let calculator = {
+		add(a,b) {console.log ("결과 :", a+b);},
+		subtract(a,b) {console.log ("결과 :", a-b);},
+        multiply(a,b) {console.log ("결과 :", a*b);},
+        divide(a,b) {
+			if (b === 0) {
+				console.log ("0으로 나눌 수 없습니다.");
+            } else {console.log ("결과 :", a/b);}
+        }
+    }
+
+	// 메서드 함수() <- 괄호 안에 매개 변수를 지정하면 해당 메서드를 호출할 때
+    // 지정된 매개변수를 메서드에 같이 호출해주어야 한다.
+	calculator.add(4,2);
+
+
+</script>
+
+</body>
+</html>

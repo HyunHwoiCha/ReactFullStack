@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <script>
+    </script>
+    <style>
+    </style>
+</head>
+<body>
+<header>
+</header>
+
+<main>
+</main>
+
+<footer>
+</footer>
+
+<script>
+    // 함수(function)
+    // 특정 작업을 수행하도록 묶은 재사용 가능한 코드블록
+    /*
+    * function 함수명 (매개변수) {
+    *     명령
+    *     return 반환값;
+    * }
+    * */
+
+    // 두 수를 더하여 반환하는 add함수
+    function add (a,b) {
+        return a + b;
+	}
+
+	console.log (add (10, 7));
+
+	// 선언문 형식
+    function f1(name) {
+		return `안녕, ${name}`;
+    }
+
+	// 함수 표현식
+	let f2 = function (name) {
+		return `안녕, ${name}`;
+	}
+
+	// 화살표 함수
+    let f3 = (name) => {
+		return `안녕, ${name}`;
+    }
+	// {}와 return을 함께 생략할 수 있다.
+    // 매개변수가 하나라면 (), 소괄호도 생략 가능.
+    let f4 = name => `안녕, ${name}`;
+
+	// 매개변수
+    // 함수를 정의할 때 사용하는 변수.
+    // 인자
+    // 함수를 호출할 때 전달하는 값.
+
+    // dafault 매개변수
+    // 전달된 인자가 없을 때 함수 내부로 전달되는 기본 값.
+
+    function power(x, n=2) {
+        return x ** n;
+    }
+
+	console.log (power (10));
+
+	// 반환 값과 조기 종료
+    // 함수 안에서 return을 만나게 되면 함수를 즉시 종료하고
+    // 값을 돌려준다.
+    // 반환 값을 명시하지 않으면 undefined를 반환한다.
+    
+    function isAdult (age) {
+        return age >= 19;
+	}
+
+	console.log (isAdult(20));
+</script>
+
+</body>
+</html>
