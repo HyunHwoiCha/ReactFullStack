@@ -30,7 +30,61 @@
 	// 인자로 전달된 값이 배열이 아니거나 길이가 0이면 0을 반환하기
 	// Arry.isArray(배열) -> 배열인지 아닌지 판단
 	// 배열.length -> 배열의 길이
-</script>
+	function arrayAvg(arr) {
+		if (!Array.isArray(arr) || arr.length === 0) {
+			return 0;
+        }
+		return arr.reduce ((acc,v) => acc + v, 0) / arr.length;
+	}
 
+	console.log (arrayAvg ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+
+	// 사용자 정보 관리 객체 만들기
+    // userManager라는 객체를 만든다.
+    // 이 객체는 배열과 메서드를 이용해서 사용자 정보를 관리한다.
+    // 속성 : users (사용자 목록을 담는 배열 각 요소는 {name, age}형태의 객체이다.)
+    // 메서드 :
+    // - addUser (name, age) : 이름과 나이를 받아 배열에 새 사용자 객체를 추가하고
+    // "사용자 추가 : 이름(나이)"를 출력한다.
+    // - printAll() : users배열에 있는 모든 사용자의 이름과 나이를 한줄씩 출력한다.
+    // - findUser(name) : 이름이 일치하는 사용자를 찾아 "찾음 : 이름(나이)"를
+    // 출력하고 없으면 "사용자를 찾을 수 없습니다."를 출력한다.
+
+    const userManager = {
+		users: [],
+
+        addUser (name, age) {
+			this.users.push({name, age}); // {name:name, age:age}
+			console.log(`사용자 추가:${name}(${age})`);
+		},
+
+        printAll () {
+            if (this.users.length === 0) {
+                console.log ("등록된 사용자가 없습니다.");
+            }
+            this.users.forEach(user => console.log(`${user.name}(${user.age})`));
+        },
+
+        findUser (m_name) {
+            const found = this.users.find (user => user.name === m_name);
+
+            if (found) {
+                console.log (`찾음 : ${found.name}(${found.age})`);
+            }
+            else {
+                console.log ("사용자를 찾을 수 없습니다.");
+            }
+        }
+	};
+
+	userManager.addUser("홍길동",20);
+	userManager.addUser("김영희",19);
+	userManager.printAll();
+	userManager.findUser("김영희");
+
+	// 나머지 연산을 사용하여 짝수인지 판별하는 함수 작성하기
+    const isEven = n => typeof n === 'number' && n % 2 === 0;
+	console.log (isEven(2));
+	</script>
 </body>
 </html>

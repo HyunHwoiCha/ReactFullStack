@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <script>
+    </script>
+    <style>
+        .dark{
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <p id="p_id">자바 스크립트로 css 바꾸기 연습</p>
+</header>
+
+<main>
+</main>
+
+<footer>
+</footer>
+
+<script>
+    let element = document.getElementById("p_id");
+	// style 프로퍼티
+	// element.style.color= 'red';
+	// element.style.backgroundColor= 'lightblue';
+	// element.style.fontSize= '30px';
+	// element.style.display= 'block';
+	// element.style.border= '2px solid black';
+
+	// 클래스의 추가/제거
+	element.classList.add('dark');
+
+	// setAttribute | classList
+
+    // setAttribute
+    // : class 값이 있다면 덮어쓰기를 한다.
+    // : class 전용이 아니라 다른 속성에도 사용이 가능하다.
+
+    // classList
+    // : 기존 class는 그대로 두고 추가가 된다.
+    // : class의 값을 바꿀 때는 classList를 쓰는 것이 안전하다.
+
+    // 다중 속성 변경
+    // .style.cssText
+    element.style.cssText= `
+        color: #333;
+        background-color: white;
+        padding: 20px;
+        border: 1px solid #333;
+        border-radius: 12px;
+    `
+</script>
+
+</body>
+</html>

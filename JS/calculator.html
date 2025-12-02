@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculatorTitle</title>
+    <script>
+    </script>
+    <style>
+        :root {
+            --border: 2px inset black;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container__calculator{
+            border: var(--border);
+            padding: 5px;
+            margin: 10px;
+        }
+
+        th, td {
+            border: var(--border);
+            padding: 10px;
+        }
+
+        input[type="text"] {
+            width: 400px;
+            border-style: none;
+        }
+
+        li {
+            list-style: none;
+            float: left;
+            margin-left: 10px;
+        }
+
+        ul {
+            overflow: hidden;
+        }
+
+        .table__btn__vowel{
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+<header>
+</header>
+
+<main>
+        <table class="container__calculator">
+            <tr>
+                <th>수1</th>
+                <td><input type="text" id="numberValue1" name="numberValue1"></td>
+            </tr>
+
+            <tr>
+                <th>수2</th>
+                <td><input type="text" id="numberValue2" name="numberValue2"></td>
+            </tr>
+
+            <tr>
+                <td class="table__btn__vowel" colspan="2">
+                    <ul>
+                        <li>
+                            <button class="operator" value="+">+</button>
+                        </li>
+                        <li>
+                            <button class="operator" value="-">-</button>
+                        </li>
+                        <li>
+                            <button class="operator" value="*">*</button>
+                        </li>
+                        <li>
+                            <button class="operator" value="/">/</button>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <th>결과</th>
+
+                <td><input type="text" id="result" name="result"></td>
+            </tr>
+        </table>
+</main>
+
+<footer>
+</footer>
+
+<script>
+    document.querySelectorAll(".operator").forEach(btn => {
+		btn.addEventListener("click", () => {
+			const number1 = Number(document.getElementById("numberValue1").value);
+			const number2 = Number(document.getElementById("numberValue2").value);
+			const result = document.getElementById("result");
+
+			const operator = btn.value;
+
+			switch (operator) {
+				case '+' : result.value = number1 + number2; break;
+				case '-' : result.value = number1 - number2; break;
+				case '*' : result.value = number1 * number2; break;
+				case '/' : result.value = number1 / number2; break;
+			}
+        });
+    });
+</script>
+
+</body>
+</html>

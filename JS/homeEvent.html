@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <script>
+    </script>
+    <style>
+    </style>
+</head>
+<body>
+<header>
+    <h2>폼 이벤트</h2>
+    <form id="myform">
+        <label>
+            이름 :
+            <input id="nameInput" type="text" name="name">
+        </label>
+        <br><br>
+        <label>
+            과일 선택 :
+            <select id="fruitSelect" name="fruit">
+                <option value="">선택하세요</option>
+                <option value="사과">사과</option>
+                <option value="바나나">바나나</option>
+            </select>
+        </label>
+        <br><br>
+        <textarea id="memo" rows="3" cols="30">텍스트를 드래그 해보세요.</textarea>
+        <br><br>
+        <button type="submit">전송</button>
+        <button type="reset">리셋</button>
+    </form>
+
+    <p id="meg"></p>
+</header>
+
+<main>
+</main>
+
+<footer>
+</footer>
+
+<script>
+    const nameInput = document.querySelector ("#nameInput");
+	const fruitSelect = document.querySelector ("#fruitSelect");
+	const memo = document.querySelector ("#memo");
+	const form = document.querySelector ("#myform");
+	const meg = document.querySelector ("#meg");
+
+	nameInput.addEventListener("focus", function () {
+		meg.textContent= "이름 입력 창에 포커스가 되어 있습니다."
+	})
+
+	nameInput.addEventListener("blur", function () {
+		meg.textContent= "이름 입력 창에서 포커스가 벗어났습니다."
+	})
+
+    // change : 값이 바뀐 다음, 포커스를 잃을 때 발생.
+	fruitSelect.addEventListener("change", function () {
+		meg.textContent= `과일을 ${fruitSelect.value}로 변경하였습니다.`
+	})
+
+	form.addEventListener("submit", function (e) {
+		 e.preventDefault(); // 실제로 서버로 보내는 동작을 막는다.
+		meg.textContent= "submit 이벤트가 발생하였습니다."
+	})
+
+	form.addEventListener("reset", function (e) {
+		meg.textContent= "reset 이벤트가 발생하여 초기화 되었습니다."
+	})
+
+	memo.addEventListener("select", function () {
+		const start = memo.selectionStart;
+		const end = memo.selectionEnd;
+		const selected = memo.value.substring (start,  end);
+		meg.textContent = `select 이벤트 발생, 선택한 문장은 "${selected}" 입니다.`;
+	})
+
+</script>
+
+</body>
+</html>

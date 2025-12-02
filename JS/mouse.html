@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <script>
+    </script>
+    <style>
+    </style>
+</head>
+<body>
+<header>
+    <h2>마우스 이벤트</h2>
+    <div id="box" style="width: 200px; height: 100px; border: 1px solid black;">
+        여기 위에 마우스를 올리거나 클릭해보세요.
+    </div>
+</header>
+
+<main>
+</main>
+
+<footer>
+</footer>
+
+<script>
+    const box = document.querySelector("#box")
+
+	box.addEventListener("click", function () {
+        box.textContent = "Click 이벤트가 발생하였습니다.";
+	})
+
+    box.addEventListener("dblclick", function () {
+		box.textContent = "Double Click 이벤트가 발생하였습니다.";
+	})
+
+	box.addEventListener("mouseover", function () {
+		box.style.backgroundColor= "lightblue";
+	})
+
+	box.addEventListener("mouseout", function () {
+		box.style.backgroundColor= "";
+	})
+
+	box.addEventListener("mousedown", function () {
+		box.style.borderColor= "red";
+		box.textContent= "마우스를 누르고 있는 중입니다.";
+	})
+
+	box.addEventListener("mouseup", function () {
+		box.style.borderColor= "";
+	})
+
+</script>
+
+</body>
+</html>

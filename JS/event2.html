@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <script>
+    </script>
+    <style>
+    </style>
+</head>
+<body>
+<header>
+    <input type="button" id="target1" value="버튼1">
+    <input type="button" id="target2" value="버튼2">
+</header>
+
+<main>
+</main>
+
+<footer>
+</footer>
+
+<script>
+    let btn1 = document.getElementById("target1");
+	let btn2 = document.getElementById("target2");
+
+	function btn_listener (event) {
+        switch (event.target.id) {
+            case 'target1':
+				alert (1);
+				break;
+
+            case 'target2':
+				alert (2);
+				break;
+		}
+	}
+
+	btn1.addEventListener("click",btn_listener);
+	btn2.addEventListener("click",btn_listener);
+</script>
+
+</body>
+</html>

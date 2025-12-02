@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <script>
+    </script>
+    <style>
+        .head{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .result {
+            background: #333;
+            width: 400px;
+            height: 500px;
+            color: white;
+            padding: 10px;
+        }
+
+        #number {
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .head__num {
+            font-size: 20px;
+        }
+
+        .btn {
+            margin: 10px;
+            width: 80px;
+            height: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="head">
+        <p class="head__num">단 : <input id="number" class="num" name="number"></p>
+        <input type="button" class="btn start" value="계산 시작">
+        <input type="button" class="btn end" value="숨기기">
+    </div>
+    <hr>
+
+
+    <div id="result" class="result"></div>
+</header>
+
+<main>
+</main>
+
+<footer>
+</footer>
+
+<script>
+	const start = document.querySelector(".start");
+	const end = document.querySelector(".end");
+
+    start.addEventListener("click", function () {
+		const number = document.querySelector("#number").value;
+		const result = document.querySelector(".result");
+
+		if (number.trim() == '') {
+			alert("값을 입력하여 주시기 바랍니다.");
+			return;
+        }
+
+		if (number < 2 || number > 9) {
+			alert("2 ~ 9 범위 내의 값을 입력하여 주시기 바랍니다.");
+			return;
+        }
+
+		let str = "";
+		str += `${number}단<br>`
+		for (let i = 1; i <= 9; i++) {
+			str += `${number} * ${i} = ${number*i}<br>`
+        }
+
+		result.innerHTML = str;
+    });
+
+	let b_show = true;
+
+	end.addEventListener("click", () => {
+		b_show = !b_show;
+		document.querySelector(".end").value = b_show ? "숨기기" : "보이기";
+		document.querySelector(".result").style.display = b_show ? "block" : "none";
+    })
+
+</script>
+
+</body>
+</html>

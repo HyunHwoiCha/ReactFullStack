@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <script>
+    </script>
+    <style>
+    </style>
+</head>
+<body>
+<header>
+    <h2>키보드 이벤트</h2>
+    <input id="input" type="text" placeholder="키를 눌러보세요">
+    <p id="log"></p>
+</header>
+
+<main>
+</main>
+
+<footer>
+</footer>
+
+<script>
+    const inPut = document.querySelector("#input");
+	const log = document.querySelector("#log");
+
+    // 키다운 이벤트가 발생하면
+    // 브라우저는 이벤트 정보를 담은 객체를 생성한다.
+    // 우리가 등록한 함수에 그 객체를 전달하여 호출한다.
+    // event객체 안에 key라는 프로퍼티가 있다.
+    // 해당 프로퍼티 안에는 누른 키 값을 가지고 있다.
+	input.addEventListener("keydown", function (event) {
+		log.textContent = `keydown : ${event.key}키를 눌렀습니다.`
+	})
+
+	input.addEventListener("keyup", function (event) {
+		log.textContent = `keydown : ${event.key}키를 뗐습니다.`
+	})
+
+</script>
+
+</body>
+</html>

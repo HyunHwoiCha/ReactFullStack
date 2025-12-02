@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <script>
+    </script>
+    <style>
+        :root {
+            --bg-color: #444;
+            --text-color: #fff;
+            --border-temporary: 1px dashed;
+            --border-radius: 1rem;
+        }
+        body {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        ul{
+            list-style: none;
+        }
+
+        .menu__bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .menu__nav {
+            display: flex;
+            flex-direction: row;
+            padding: 1.5rem;
+            margin: 0 auto;
+            gap: 3rem;
+        }
+
+        .menu__nav li:hover {
+            color: blue;
+            text-decoration: blue underline;
+            cursor: pointer;
+        }
+
+        .menu__line {
+            margin: 0 auto 10px auto;
+            width: 22rem;
+            border: 1px solid #999;
+        }
+
+        .profile {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .profile__card {
+            background: var(--bg-color);
+            color: var(--text-color);
+            border: 1px solid var(--bg-color);
+            border-radius: var(--border-radius);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem 4rem;
+            margin: 0 auto;
+        }
+
+        .profile__img {
+            border: 2px solid lightblue;
+            border-radius: 50%;
+            width: 10rem;
+            height: 10rem;
+            text-align: center;
+            align-content: center;
+        }
+
+        .card__list {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin: auto 0;
+            gap: 1rem;
+        }
+
+        .btn__list {
+            margin: 2rem auto;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            gap: 0.5rem;
+        }
+
+        .btn {
+            padding: 0.5rem;
+        }
+        
+        @media (min-width: 1024px) {
+            .menu__nav {
+                gap: 10rem;
+            }
+
+            .profile__card {
+                gap: 4rem;
+            }
+
+            .menu__line {
+                width: 50rem;
+            }
+
+            .btn__list {
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<header class="menu">
+    <nav class="menu__bar">
+        <ul class="menu__nav">
+            <li>메뉴1</li>
+            <li>메뉴2</li>
+            <li>메뉴3</li>
+            <li>메뉴4</li>
+            <li>메뉴5</li>
+        </ul>
+    </nav>
+    <div class="menu__line"></div>
+</header>
+
+<main class="profile">
+    <div class="profile__card">
+        <p class="profile__img"><img src="" alt="사진 여기에"></p>
+        <ul class="card__list">
+            <li><strong>이름</strong> : </li>
+            <li><strong>직업</strong> : </li>
+            <li>
+                <strong>설명</strong>
+                <br>
+                간단한 설명
+            </li>
+        </ul>
+    </div>
+
+    <div class="btn__list">
+        <button class="btn" value="styled">Style</button>
+        <button class="btn" value="primary">Primary</button>
+        <button class="btn" value="secondary">Secondary</button>
+        <button class="btn" value="outline">Outline</button>
+        <button class="btn" value="ghost">Ghost</button>
+        <button class="btn" value="danger">Danger</button>
+    </div>
+</main>
+
+<footer>
+</footer>
+
+<script>
+    document.querySelectorAll(".btn").forEach(btn => {
+		btn.addEventListener("click", () => {
+			const profileCard = document.querySelector(".profile__card");
+			const cardStyleBtn = btn.value;
+
+            switch (cardStyleBtn) {
+                case 'styled':
+					profileCard.style.backgroundColor= 'white';
+					profileCard.style.color= '#333';
+					profileCard.style.border= '1px solid var(--bg-color)';
+					break;
+                case 'primary':
+					profileCard.style.backgroundColor= 'var(--bg-color)';
+					profileCard.style.color= 'var(--text-color)';
+					profileCard.style.border= '1px solid var(--bg-color)';
+					break;
+				case 'secondary':
+					profileCard.style.backgroundColor= 'lightcoral';
+					profileCard.style.color= 'var(--text-color)';
+					profileCard.style.border= '1px solid lightcoral';
+					break;
+				case 'outline':
+					profileCard.style.backgroundColor= 'white';
+					profileCard.style.color= 'var(--bg-color)';
+					profileCard.style.border= '1px solid lightcoral';
+					break;
+				case 'ghost':
+					break;
+				case 'danger':
+					break;
+				default:
+					break;
+			}
+		});
+    });
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <script>
+    </script>
+    <style>
+    </style>
+</head>
+<body>
+<header>
+    <p id="title">Hello</p>
+
+    <p class="item">A</p>
+    <p class="item">B</p>
+
+    <ul>
+        <li class="menu">Home</li>
+        <li class="menu">About</li>
+    </ul>
+</header>
+
+<main>
+</main>
+
+<footer>
+</footer>
+
+<script>
+    // document 객체를 이용해서 HTML 태그를 선택하는 방법
+
+    // 1. getElementById (id값)
+    const titleEl = document.getElementById("title");
+	console.log (titleEl);
+
+	// 2. getElementByClassName (class값)
+    // 같은 클래스를 가진 요소 전체를 HTMLCollection으로 반환
+    // HTMLCollection : HTML 요소들을 모아 놓은 유사 배열 타입.
+    // 유사 배열이므로 index로 접근이 가능하고 length가 존재한다.
+    // 단 map, filter와 같은 메서드는 사용할 수 없다.
+    const classEl = document.getElementsByClassName("item");
+	// .textContent : dom 요소 안에 들어있는 "텍스트만" 읽거나
+    // 바꿀 때 사용하는 프로퍼티
+	console.log (classEl[0].textContent);
+
+	// 3. getElementByTagName (Tag값)
+    const firstMenu = document.getElementsByTagName("li");
+	console.log (firstMenu[0].textContent);
+
+	// 4. querySelector (css선택자)
+    // 일치하는 요소중 첫번째만 반환
+    const menu = document.querySelector(".menu");
+	console.log(menu.textContent);
+</script>
+
+</body>
+</html>

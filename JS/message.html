@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <script>
+    </script>
+    <style>
+    </style>
+<!--  HTML 에서 버튼을 클릭하면 <p>태그의 내용을 "버튼이 클릭되었습니다."라고 바꾸는 코드 작성하기 -->
+<!--  <button id=btn>클릭</button>
+      <p id="message">아직 클릭하지 않았습니다.</p>
+  -->
+</head>
+<body>
+<header>
+    <button id="btn" class="btn">클릭</button>
+
+    <p id="meg" class="meg">
+        아직 클릭하지 않았습니다.
+    </p>
+</header>
+
+<main>
+</main>
+
+<footer>
+</footer>
+
+<script>
+    const btn = document.querySelector("#btn");
+	const meg = document.querySelector("#meg");
+
+	btn.addEventListener("mousedown", () => {
+		meg.innerHTML = "버튼이 클릭되었습니다.";
+    })
+	btn.addEventListener("mouseup", () => {
+		meg.innerHTML = "아직 클릭하지 않았습니다.";
+	})
+
+
+</script>
+
+</body>
+</html>

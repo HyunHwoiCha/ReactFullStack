@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <script>
+    </script>
+    <style>
+    </style>
+</head>
+<body>
+<header>
+    <button onclick="oneClick()">클릭</button>
+
+    <button id="btn">클릭2</button>
+
+    <button id="btn2">클릭3</button>
+</header>
+
+<main>
+</main>
+
+<footer>
+</footer>
+
+<script>
+    // HTML 요소에 속성을 통해서 이벤트 처리를 하는 방법
+    // HTML 코드와 JS 코드가 섞여서 유지보수가 힘들다.
+    // 함수의 의존도가 높다.
+    const oneClick = () => alert("버튼 클릭됨");
+
+	// dom 속성으로 이벤트 처리를 하는 방식
+	let btn = document.getElementById("btn");
+    btn.onclick=oneClick;
+
+	// addEventListenr로 이벤트를 등록하는 방식
+    let btn2 = document.getElementById("btn2");
+
+	// target.addEventListener(type, listener, options)
+    // type: "click", "input", "keydown"과 같은 이벤트명
+    // listener : 이벤트가 발생했을 때 실행할 기능(함수[method])
+	btn2.addEventListener("click", function () {
+        alert("버튼이 클릭되었습니다.")
+	});
+</script>
+
+</body>
+</html>
